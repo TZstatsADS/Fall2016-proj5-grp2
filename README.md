@@ -22,6 +22,11 @@ Term: Fall 2016
     + Write songs (w.r.t. chords and keys) based on particular styles you want
         + Do demo with actual sound	
         + Build a shiny app if possible
+        
++ Examples:
+    + https://www.hooktheory.com/trends#node=4.1.5.6&key=rel
+    + https://github.com/mexindian/Musical-chord-progressions
+    + http://amitkohli.com/chord-progressions-of-5-000-songs/
     
     
 **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
