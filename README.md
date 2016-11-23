@@ -23,6 +23,22 @@ Term: Fall 2016
         + Do demo with actual sound	
         + Build a shiny app if possible
         
+        
++ Dataset:
++ Audio Dataset List: http://www.audiocontentanalysis.org/data-sets/
++ MARL (Music and Audio Research Lab) at NYU Music Technology program https://github.com/tmc323/Chord-Annotations
+    + 195 USpop songs chord transcription https://github.com/tmc323/Chord-Annotations/tree/master/uspopLabels
+    + 100 RWC pop chord annotation https://github.com/tmc323/Chord-Annotations/tree/master/RWC_Pop_Chords
++ McGill Billboard Project http://ddmal.music.mcgill.ca/billboard
+    + Unzip tar.xz http://askubuntu.com/questions/25347/what-command-do-i-need-to-unzip-extract-a-tar-gz-file
+    + Billboard-parser package http://hackage.haskell.org/package/billboard-parser
++ The Beatles http://isophonics.net/content/reference-annotations-beatles
+    + http://isophonics.net/content/reference-annotations-beatles
+    
++ Music theory:
+    + http://www.ijita.com/tool/usedchord/
+    + 
+        
 + Examples:
     + https://www.hooktheory.com/trends#node=4.1.5.6&key=rel
     + https://github.com/mexindian/Musical-chord-progressions
