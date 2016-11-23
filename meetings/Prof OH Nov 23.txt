@@ -1,0 +1,31 @@
+chord extraction: (Cen Zeng)
+
+Chord progression: 
+    sequence analysis (Yixin Sun)
+    music n-gram: 2,3,4
+    
+    profile music signature: genre
+    play music and ask what genre you think it is and ask why
+    
+
+Play one song, and visualize by circles 2-gram for one song
+all songs by genres, different circles, sequence direction
+able to add songs one by one?
+
+
+Concurrence analysis:
+3-gram as a word, do topic modeling
+read literature: 切词
+
+intro, verse, chorus ... 相不相关
+
+ted talk: 预测song火不火，refreshing
+
+tibble txt file
+
+Song visualizer: what are panes and layers （Kanghui Jiang)
+.svl layer file format, SML format, region divide into prelude...
+.lab readable 
+
+http://isophonics.net/content/aes132-tutorial#sv
+
