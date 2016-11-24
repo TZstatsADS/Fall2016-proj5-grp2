@@ -13,7 +13,7 @@ all songs by genres, different circles, sequence direction
 able to add songs one by one?
 
 
-Concurrence analysis:
+Cooccurrence analysis:
 3-gram as a word, do topic modeling
 read literature: 切词
 
@@ -28,4 +28,6 @@ Song visualizer: what are panes and layers （Kanghui Jiang)
 .lab readable 
 
 http://isophonics.net/content/aes132-tutorial#sv
+
+API: (Max)
 
