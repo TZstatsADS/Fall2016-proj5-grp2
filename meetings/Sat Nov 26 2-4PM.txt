@@ -1,0 +1,33 @@
+Meeting 2-5PM on Sat, Nov 26
+Next meeting: Wednesday class
+
+Task assignment:
+
+- Cen Zeng:
+分段提和弦 intro, verse, chorus...
+专门提取tonic
+变调80+首
+
+
+- Vivien:
+Normalize chords based on keys (tonics)
+
+
+- Max:
+API加genre（风格）到csv (done!) # 66 genres
+try finding genres by song names 
+
+
+- Kanghui, Yixin: 
+n-gram (bigram, 4-gram)
+
+
+出来结果了在群里吼一声大家就可以接着用结果往下做了
+
+
+目标：
+播放一首歌问它的风格
+通过4-gram能generate一段音乐出来（给定genre和key）
+希望能输入和弦播出来音乐的插件能放进markdown（比人工播放高级点的）
+
+
