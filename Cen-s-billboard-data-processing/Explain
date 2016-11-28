@@ -1,0 +1,3 @@
+tonic: 1006段旋律各自对应的tonic
+all.chord: 1006段旋律的chord list，每段旋律的第一个元素对应歌曲编号（按文件名的编号）
+chord.dictionary: 没有normalize之前，所有chord的种类（共955种）
