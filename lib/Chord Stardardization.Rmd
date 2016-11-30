@@ -1,0 +1,77 @@
+---
+title: "Standardize chords"
+output: html_notebook
+---
+```{r}
+head(all.chord)
+```
+
+```{r}
+table(tonic)
+# tonic
+#   A  Ab   B  Bb   C  *C#  Cb???   D  Db   E  Eb   F  F#   G  *G#  *Gb 
+# 110  61  50  64 133    7   3   145  40 119  59  77  13 114    1   10 
+length(unique(tonic)) # 16
+# should be 12 major scales
+```
+First convert all essentially same tones to their other name:    
+  - C# = Db 
+  - Gb = F# 
+  - G# = Ab 
+  - Cb = B  
+so that we have 12 tonics:      
+C, C#, D, Eb, E, F, F#, G, Ab, A, Bb, B 
+    
+```{r}
+grep("Cb", unlist(all.chord), value = T) # 164 Cb chords
+sum(grepl("B:", unlist(all.chord))) # 7187 B chords
+sum(grepl("Gb", unlist(all.chord))) # 1713 chords
+sum(grepl("F#", unlist(all.chord))) # 3417 chords
+```
+Chord annotation: http://ismir2005.ismir.net/proceedings/1080.pdf (see Page 4)
+```{r}
+length(unique(all_chord)) #???
+length(chord.dictionary) # 995 unique chords
+```
+We want to keep only 4 types of triad chords, theory here http://www.360doc.com/content/11/0301/09/5949657_97283592.shtml 
+  
+12 major triads 
+12 minor triads   
+12 dim triads 
+12 aug triads 
+= total 48 triads 
+    
+Solve: minmaj, dim, hdim, aug, sus, digit 
+  
+1. For minmaj7, theory here http://www.hearandplay.com/main/minor-major-7-chords   
+minmaj7 is basically a minor triad.   
+Change all chords containing 'minmaj' to '*:min'
+```{r}
+grep("minmaj", chord.dictionary, value = T)
+```
+  
+2. For dimished chords, theory here http://www.360doc.com/content/11/0301/09/5949657_97283592.shtml  
+Change all chords containing 'dim' to '*:dim'
+```{r}
+grep("dim", chord.dictionary, value = T)
+```
+  
+3. For augmented chords, http://www.360doc.com/content/11/0301/09/5949657_97283592.shtml  
+Change all chords containing 'aug' to '*:aug'
+```{r}
+grep("aug", chord.dictionary, value = T)
+```
+  
+4. For suspended chords, theory here http://www.cndzq.com/bbs/thread-325047-1-1.html  
+Change all chords containing 'sus' to '*:sus'
+```{r}
+grep("sus", chord.dictionary, value = T)
+```
+
+5. For ':digit' chords, theory here https://www.youtube.com/watch?v=I0y2LY4sPZA  
+Change all chords containing ':digit' to '*:maj'
+```{r}
+grep("\\:[[:digit:]]", chord.dictionary, value = T)
+```
+
+Now stardard to roman numbers 1 to 7
