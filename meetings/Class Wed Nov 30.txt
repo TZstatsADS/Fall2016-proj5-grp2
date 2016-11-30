@@ -1,0 +1,54 @@
+Prof:
+n-gram starting from terms with high tf-idf
+
+motif analysis
+literature
+main pattern 
+
+Algo: market basket
+joint occurance
+
+
+
+- key (60), key-invariant (standardized, 12)
+- bigram, 4-gram 
+- tf, tf-idf (find special n-grams for each genre)
+
+
+
+------------------------------------------------------------------------------------------
+Next meeting: 6-8PM Sat, Dec 3 @ Butler 408
+
+
+Task assignments:
+
+Cen:
+change key names (C# = Db, Gb = F#, G# = Ab, Cb = B)
+delete duplicated chords
+keep only maj, min, aug, dim, sus chords
+standardize keys
+
+Yixin:
+4-gram
+Sankey diagram using chords (for whole database (color as genres), for some genres, visually add lines for each song live)
+topic modeling on 4-grams
+tf-idf for genres
+
+Kanghui:
+bi-gram
+chord diagram (for one song, for some genres, visually add lines for each song live)
+tf-idf for genres
+
+Max:
+see if music player can be embedded in shiny app or R markdown
+click a chord, play it automatically
+
+Vivien:
+based on 4-grams, tf-idf
+combine some genres
+predict/generate 4-gram sequence
+Algo: market basket, pattern analysis (apriori algorithm)
+
+EDA: genres 
+with time 
+combine some genres
