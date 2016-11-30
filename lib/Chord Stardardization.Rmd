@@ -14,13 +14,13 @@ table(tonic)
 length(unique(tonic)) # 16
 # should be 12 major scales
 ```
-First convert all essentially same tones to their other name:    
+First convert all essentially same keys to their other name:    
   - C# = Db 
   - Gb = F# 
   - G# = Ab 
   - Cb = B  
 so that we have 12 tonics:      
-C, C#, D, Eb, E, F, F#, G, Ab, A, Bb, B 
+C, Db, D, Eb, E, F, F#, G, Ab, A, Bb, B 
     
 ```{r}
 grep("Cb", unlist(all.chord), value = T) # 164 Cb chords
@@ -35,11 +35,12 @@ length(chord.dictionary) # 995 unique chords
 ```
 We want to keep only 4 types of triad chords, theory here http://www.360doc.com/content/11/0301/09/5949657_97283592.shtml 
   
-12 major triads 
-12 minor triads   
+12 maj triads 
+12 min triads   
 12 dim triads 
 12 aug triads 
-= total 48 triads 
+12 sus triads
+= total 60 triads 
     
 Solve: minmaj, dim, hdim, aug, sus, digit 
   
@@ -74,4 +75,9 @@ Change all chords containing ':digit' to '*:maj'
 grep("\\:[[:digit:]]", chord.dictionary, value = T)
 ```
 
-Now stardard to roman numbers 1 to 7
+Now stardard chords to roman numbers 1 to 7
+https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjvyIjXo9HQAhVG64MKHaNsAbIQjRwIBw&url=https%3A%2F%2Fbemusic-guitar.blogspot.com%2F2014%2F10%2Fblog-post_26.html&psig=AFQjCNGhavMaCQTdgQw_1MNGHDmUs04p0g&ust=1480524929775118
+```{r}
+
+```
+
