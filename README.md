@@ -2,7 +2,7 @@
 
 Term: Fall 2016
 
-+ Team Name: Mozarobot
++ Team Name: MelodySoup
 + Project title: Music Writing App Based on Chord & Key Mining 
 + Team members
 	+ team member 1 Kanghui Jiang (kj2381)
