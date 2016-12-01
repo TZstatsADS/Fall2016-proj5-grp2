@@ -80,7 +80,43 @@ grep("\\:[[:digit:]]", chord.dictionary, value = T)
 Now stardardize chords to Roman numbers 1 to 7 and b2, b3, b5, b6, b7, totally 12.
 https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjvyIjXo9HQAhVG64MKHaNsAbIQjRwIBw&url=https%3A%2F%2Fbemusic-guitar.blogspot.com%2F2014%2F10%2Fblog-post_26.html&psig=AFQjCNGhavMaCQTdgQw_1MNGHDmUs04p0g&ust=1480524929775118
 Need more applicable and detailed guideline.
-```{r}
 
+
+
+
+Key| I, bII, II, bIII, III, IV, bV, V, bVI, VI, bVII, VII
+
+C  | C:maj, Db:maj, D:min, Eb:maj, E:min, F:maj, F#:maj, G:maj, Ab:maj, A:min, Bb:maj, B:dim
+
+Db | Db:maj, D:maj, Eb:min, E:maj, F:min, F#:maj, G:maj, Ab:maj, A:maj, Bn:min, B:maj, C:dim
+
+D  | D:maj, Eb:maj, E:min, F:maj, F#:min, G:maj, Ab:maj, A:maj, Bb:maj, B:min. C:maj, Db:dim
+
+Eb | Eb:maj, E:maj, F:min, Gb:maj, G:min, Ab:maj, A:maj, Bb:maj, B:maj, C:min, Db:maj, D:dim
+
+E  | E:maj, F:maj, F#:min, G:maj, Ab:min, A:maj, Bb:maj, B:maj, C:maj, Db:min, D:maj, Eb:dim
+
+F  | F:maj, Gb:maj, G:min, Ab:maj, A:min, Bb:maj, B:maj, C:maj, Db:maj, D:min, Eb:maj, E:dim
+
+F# | F#:maj, G:maj, Ab:min, A:maj, Bb:min, B:maj, C:maj, Db:maj, D:maj, Eb:min, E:maj, F:dim
+
+G  | G:maj, Ab:maj, A:min, Bb:maj, B:min, C:maj, Db:maj, D:maj, Eb:maj, E:min, F:maj, F#:dim
+
+Ab | Ab:maj, A:maj, Bb:min, B:maj, C:min, Db:maj, D:maj, Eb:maj, E:maj, F:min, F#:maj, G:dim
+
+A  | A:maj, Bb:maj, B:min, C:maj, Db:min, D:maj, Eb:maj, E:maj, F:maj, Gb:min, G:maj, Ab:dim
+
+Bb | Bb:maj, B:maj, C:min, Db:maj, D:min, Eb:maj, E:maj, F:maj, F#:maj, G:min, Ab:maj, A:dim
+
+B  | B:maj, C:maj, Db:min, D:maj, Eb:min, E:maj, F:maj, F#:maj, G:maj, Ab:min, A:maj, Bb:dim
+
+```{r}
+sort(chord.dictionary)
+#  - C# = Db 
+#  - Gb = F# 
+#  - G# = Ab 
+#  - Cb = B  
+#  - A# = Bb
+#  - D# = Eb
 ```
 
