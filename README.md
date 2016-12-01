@@ -17,7 +17,7 @@ Term: Fall 2016
             + n-gram: bigram, trigram, 4-gram
         + Objective: generate sequence with 4-grams
     + Visualization
-        + use bigram to plot chord diagram 
+        + use bigram to make circular plots
             + for one song, while playing the music
             + for diff genres* (able to add songs to the diagram one by one?)
         + use 4-gram to plot sankey diagram (diff genres* in diff colors) (start with genres* or verse-chorus form) 
