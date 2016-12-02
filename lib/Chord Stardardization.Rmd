@@ -63,24 +63,28 @@ grep("dim", chord.dictionary, value = T)
 Change all chords containing 'aug' to '*:aug'
 ```{r}
 grep("aug", chord.dictionary, value = T)
+table(grep("aug", unlist(all.chord), value = T))
+
 ```
   
 4. For suspended chords, theory here http://www.cndzq.com/bbs/thread-325047-1-1.html  
 Change all chords containing 'sus' to '*:sus'
 ```{r}
 grep("sus", chord.dictionary, value = T)
+table(grep("sus", unlist(all.chord), value = T))
+
 ```
 
 5. For ':digit' chords, theory here https://www.youtube.com/watch?v=I0y2LY4sPZA  
 Change all chords containing ':digit' to '*:maj'
 ```{r}
 grep("\\:[[:digit:]]", chord.dictionary, value = T)
+tonic[as.logical(sapply(lapply(all.chord, function(x) grepl("B:dim",x)), sum))]
 ```
 
 Now stardardize chords to Roman numbers 1 to 7 and b2, b3, b5, b6, b7, totally 12.
 https://bemusic-guitar.blogspot.com/2014/10/blog-post_26.html
 http://guitarplayer.hyper-card.com/L2guitar/029.html
-
 
 
 Key| I, bII, II, bIII, III, IV, bV, V, bVI, VI, bVII, VII
@@ -91,11 +95,11 @@ Db | Db:maj, D:maj, Eb:min, E:maj, F:min, F#:maj, G:maj, Ab:maj, A:maj, Bn:min, 
 
 D  | D:maj, Eb:maj, E:min, F:maj, F#:min, G:maj, Ab:maj, A:maj, Bb:maj, B:min. C:maj, Db:dim
 
-Eb | Eb:maj, E:maj, F:min, Gb:maj, G:min, Ab:maj, A:maj, Bb:maj, B:maj, C:min, Db:maj, D:dim
+Eb | Eb:maj, E:maj, F:min, F#:maj, G:min, Ab:maj, A:maj, Bb:maj, B:maj, C:min, Db:maj, D:dim
 
 E  | E:maj, F:maj, F#:min, G:maj, Ab:min, A:maj, Bb:maj, B:maj, C:maj, Db:min, D:maj, Eb:dim
 
-F  | F:maj, Gb:maj, G:min, Ab:maj, A:min, Bb:maj, B:maj, C:maj, Db:maj, D:min, Eb:maj, E:dim
+F  | F:maj, F#:maj, G:min, Ab:maj, A:min, Bb:maj, B:maj, C:maj, Db:maj, D:min, Eb:maj, E:dim
 
 F# | F#:maj, G:maj, Ab:min, A:maj, Bb:min, B:maj, C:maj, Db:maj, D:maj, Eb:min, E:maj, F:dim
 
@@ -103,7 +107,7 @@ G  | G:maj, Ab:maj, A:min, Bb:maj, B:min, C:maj, Db:maj, D:maj, Eb:maj, E:min, F
 
 Ab | Ab:maj, A:maj, Bb:min, B:maj, C:min, Db:maj, D:maj, Eb:maj, E:maj, F:min, F#:maj, G:dim
 
-A  | A:maj, Bb:maj, B:min, C:maj, Db:min, D:maj, Eb:maj, E:maj, F:maj, Gb:min, G:maj, Ab:dim
+A  | A:maj, Bb:maj, B:min, C:maj, Db:min, D:maj, Eb:maj, E:maj, F:maj, F#:min, G:maj, Ab:dim
 
 Bb | Bb:maj, B:maj, C:min, Db:maj, D:min, Eb:maj, E:maj, F:maj, F#:maj, G:min, Ab:maj, A:dim
 
@@ -117,5 +121,37 @@ sort(chord.dictionary)
 #  - Cb = B  
 #  - A# = Bb
 #  - D# = Eb
+table(unlist(all.chord))
 ```
+http://www.oocities.org/frankhau.geo/chordlesson/explain1.html 
 
+Our standardization rule is the follwing:
+
+
+Key | Chord roots
+
+C  | C, Db, D, Eb, E, F, F#, G, Ab, A, Bb, B
+---------------------------------------------
+Db | Db, D, Eb, E, F, F#, G, Ab, A, Bb, B, C
+
+D  | D, Eb, E, F, F#, G, Ab, A, Bb, B, C, Db
+
+Eb | Eb, E, F, F#, G, Ab, A, Bb, B, C, Db, D
+
+E  | E, F, F#, G, Ab, A, Bb, B, C, Db, D, Eb
+
+F  | F, F#, G, Ab, A, Bb, B, C, Db, D, Eb, E
+
+F# | F#, G, Ab, A, Bb, B, C, Db, D, Eb, E, F
+
+G  | G, Ab, A, Bb, B, C, Db, D, Eb, E, F, F#
+
+Ab | Ab, A, Bb, B, C, Db, D, Eb, E, F, F#, G
+
+A  | A, Bb, B, C, Db, D, Eb, E, F, F#, G, Ab
+
+Bb | Bb, B, C, Db, D, Eb, E, F, F#, G, Ab, A
+
+B  | B, C, Db, D, Eb, E, F, F#, G, Ab, A, Bb
+
+We stardize all chords to Key C. If the key of a song (the first column) is not C, then each root of the chords will be respectively convert to the head row.
