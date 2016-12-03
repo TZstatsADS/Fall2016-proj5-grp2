@@ -1,26 +1,26 @@
 ,Unnamed: 0,id,chart_date,target_rank,actual_rank,title,artist,peak_rank,weeks_on_chart,Genre,wiki_genre,genre
 0,0,3,7/3/61,56,57,I Don't Mind,James Brown,47,8,funk,Not Found,Funk
-1,1,4,8/7/71,32,31,You've Got A Friend,"Roberta Flack,Donny Hathaway",29,12,soul,Soft rock,Pop
+1,1,4,8/7/71,32,31,You've Got A Friend,"Roberta Flack,Donny Hathaway",29,12,soul,Soft rock,Soul
 2,2,6,8/2/80,15,16,The Rose,Bette Midler,3,25,female vocalists,Not Found,Pop
 3,3,10,3/24/84,49,51,An Innocent Man,Billy Joel,10,18,classic rock,Pop rock,Pop rock / soft rock
 4,4,12,11/15/80,65,63,Lookin' For Love,Johnny Lee,5,21,country,Country,Country
-5,5,15,8/7/76,21,21,Last Child,Aerosmith,21,15,rock,Funk rock,Classic rock
-6,6,16,7/28/84,37,39,She Bop,Cyndi Lauper,3,18,80s,New wave,Pop
+5,5,15,8/7/76,21,21,Last Child,Aerosmith,21,15,rock,Funk rock,Funk rock
+6,6,16,7/28/84,37,39,She Bop,Cyndi Lauper,3,18,80s,New wave,New Wave
 7,7,18,1/31/81,56,55,Kiss On My List,Daryl Hall & John Oates,1,23,80s,Pop rock,80s Rock
 8,8,19,10/9/76,88,87,Here's Some Love,Tanya Tucker,82,5,country,Country,Country
-9,9,21,8/2/80,91,90,Just Can't Wait,The J. Geils Band,78,5,classic rock,Rock,
+9,9,21,8/2/80,91,90,Just Can't Wait,The J. Geils Band,78,5,classic rock,Rock,Rock
 10,10,22,11/20/71,18,19,Never My Love,The 5th Dimension,12,11,60s,Baroque pop,70s pop
 11,11,23,12/7/85,88,87,And She Was,Talking Heads,54,20,new wave,Rock,New Wave
-12,12,25,7/17/71,38,36,Chicago,Graham Nash,35,11,singer-songwriter,Not Found,
-13,13,26,5/7/66,88,86,Sweet Talkin' Guy,The Chiffons,10,10,60s,Not Found,
-14,14,27,7/7/79,41,41,Rock 'N' Roll Fantasy,Bad Company,13,20,classic rock,Label,
-15,15,29,11/10/73,44,46,The Joker,Steve Miller Band,1,20,classic rock,Not Found,
-16,16,30,12/5/70,18,18,Indiana Wants Me,R. Dean Taylor,5,15,northern soul,Soft rock,
-17,17,33,2/11/78,99,100,Crazy On You,Heart,35,19,classic rock,Hard rock,
-18,18,34,3/4/78,30,29,If I Can't Have You,Yvonne Elliman,1,22,Disco,Disco,
-19,19,35,5/1/71,67,65,Freedom,Jimi Hendrix,59,8,classic rock,Not Found,
-20,20,37,4/13/68,67,65,Foggy Mountain Breakdown,Flatt & Scruggs,55,12,bluegrass,Bluegrass,
-21,21,39,9/14/74,17,17,It's Only Rock 'N Roll (But I Like It),The Rolling Stones,16,10,classic rock,Not Found,
+12,12,25,7/17/71,38,36,Chicago,Graham Nash,35,11,singer-songwriter,Not Found,Singer-songwriter
+13,13,26,5/7/66,88,86,Sweet Talkin' Guy,The Chiffons,10,10,60s,Not Found,Rock
+14,14,27,7/7/79,41,41,Rock 'N' Roll Fantasy,Bad Company,13,20,classic rock,Label,Hard rock
+15,15,29,11/10/73,44,46,The Joker,Steve Miller Band,1,20,classic rock,Not Found,Rock
+16,16,30,12/5/70,18,18,Indiana Wants Me,R. Dean Taylor,5,15,northern soul,Soft rock,Soft rock
+17,17,33,2/11/78,99,100,Crazy On You,Heart,35,19,classic rock,Hard rock,Hard rock
+18,18,34,3/4/78,30,29,If I Can't Have You,Yvonne Elliman,1,22,Disco,Disco,Disco
+19,19,35,5/1/71,67,65,Freedom,Jimi Hendrix,59,8,classic rock,Not Found,Rock
+20,20,37,4/13/68,67,65,Foggy Mountain Breakdown,Flatt & Scruggs,55,12,bluegrass,Bluegrass,Bluegrass
+21,21,39,9/14/74,17,17,It's Only Rock 'N Roll (But I Like It),The Rolling Stones,16,10,classic rock,Not Found,Hard rock
 22,22,40,6/9/90,30,28,The Power,Snap,2,22,Not Found,Not Found,
 23,23,41,11/6/71,28,27,Absolutely Right,Five Man Electrical Band,26,8,classic rock,Rock,
 24,24,43,2/25/89,50,48,Two Hearts,Phil Collins,1,18,pop,Not Found,
