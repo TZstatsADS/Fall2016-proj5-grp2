@@ -1,0 +1,235 @@
+---
+title: "Sankey Diagram"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 4-Gram 
+
+```{r}
+library(ngram)
+
+x = load("/Users/mac/Documents/Fall2016-proj5-grp2/Cen-s-billboard-data-processing/cleaned_data.RData")
+
+
+chord_use_positions = sapply(all.chord, function(x) x[1])
+
+chord_use_positions = as.integer(chord_use_positions)
+chord_use = all.chord
+names(chord_use) = chord_use_positions
+#find the used song  chord
+match_pos = match(songuse$id, chord_use_positions)
+pos = na.omit(as.character(chord_use_positions[match_pos]))
+chord_use = chord_use[pos]  #872 songs actual
+#name use the song used id and remove the first id in list
+names(chord_use) = pos
+chord_use = lapply(chord_use, function(x) x[-1])
+
+#concatenate chords
+chord_use_concatenated = lapply(chord_use, concatenate, 
+                                collapse = " ", rm.space = FALSE)
+
+
+lens =lapply(chord_use_concatenated, function(x) length(strsplit(x, split = " ")[[1]]))
+poses = unlist(lens)
+poses_rm = which(!poses >= 4)
+chord_use_concatenated = chord_use_concatenated[-poses_rm ]
+```  
+
+#topic model use 4-gram
+
+
+```{r}
+chord_use_4_grams = lapply(chord_use_concatenated, ngram, n = 4, sep = " ")
+
+
+
+
+library(stringr)
+
+songs_chords = c()
+for(i in 1:length(chord_use_4_grams)) {
+a = get.phrasetable(chord_use_4_grams[[i]])
+a[,1] = str_trim(a[,1])
+a[,1] = gsub(" ","->",a[,1])
+strs = rep(a[,1], a[,2])
+strs = paste(strs, collapse = " ")
+songs_chords = c(songs_chords, strs)
+}
+
+library(topicmodels)
+
+library(NLP)
+
+library(tm)
+
+chords_use = songs_chords
+
+chords_use=enc2utf8(chords_use)
+
+#generate corpus
+doc.vec = VectorSource(chords_use)
+doc.corpus = Corpus(doc.vec)
+
+
+TDM = TermDocumentMatrix(doc.corpus)
+DTM = DocumentTermMatrix(doc.corpus)
+
+library(slam)
+#USE tfidf to extract key chords
+term_tfidf =tapply(DTM$v/row_sums(DTM)[DTM$i], DTM$j, mean) *log2(nDocs(DTM)/col_sums(DTM > 0))
+DTM = DTM[,term_tfidf >= 0.1]
+DTM = DTM[row_sums(DTM) > 0,]
+
+#construct LDA model
+lda.chords_use = LDA(DTM, k = 5, method="VEM", control = list(seed = 1500))
+summary(lda.chords_use)
+
+#topic of each song
+topic1=topics(lda.chords_use,1)
+data.frame(topic1)
+#key chords of each topic
+terms(lda.chords_use, 20)
+```
+
+#Sankey diagram using chords 
+```{r}
+library(networkD3)
+
+whole = NULL
+
+ids = as.numeric(names(chord_use_4_grams))
+
+genres_ids = genre[match(ids, genre$id),"Genre"]
+
+for(i in 1:length(chord_use_4_grams)) {
+  a = get.phrasetable(chord_use_4_grams[[i]])
+  whole = rbind(whole, cbind(a[,1:2], genres = as.character(genres_ids)[i]))
+}
+
+whole_merge = aggregate(freq ~ ngrams, data = whole,sum)  
+  
+head(whole_merge)
+
+dim(whole_merge)
+
+whole_merge2 = whole_merge[rev(order(whole_merge$freq)),]
+
+head(whole_merge2 )
+
+whole_merge3 = whole_merge2
+
+
+whole_merge4 = NULL
+
+
+
+for(i in 1:nrow(whole_merge3)) {
+  whole_merge4 = rbind(whole_merge4, c(strsplit(whole_merge3[i,1],split= " ")[[1]],whole_merge3[i,2]))
+}
+
+head(whole_merge4)
+
+c1 = unique(whole_merge4[,1])
+
+c2 = unique(whole_merge4[,2])
+
+c3 = unique(whole_merge4[,3])
+
+c4 = unique(whole_merge4[,4])
+
+
+
+
+nodes = data.frame(name = c(c1,c2,c3,c4),stringsAsFactors = F)
+
+
+p1=match(whole_merge4[,1],c1) - 1
+p2= match(whole_merge4[,2],c2) - 1 + length(c1)
+p3= match(whole_merge4[,3],c3) - 1 + length(c1) + length(c2)
+p4 = match(whole_merge4[,4],c4) - 1 + length(c1) + length(c2) + length(c3)
+
+dt = rbind(
+  data.frame(a=p1, b=p2, d=whole_merge4[,5]) ,
+  data.frame(a=p2, b=p3, d=whole_merge4[,5])
+)
+
+
+dt2 = rbind(dt,
+            data.frame(a=p3, b=p4, d=whole_merge4[,5])
+            )
+  
+dt2[,3] = as.integer(as.character(dt2[,3]))
+
+
+
+links = dt2
+colnames(links) = c("source","target","value")
+
+
+links2 = aggregate(value ~ source + target, data = links, sum)
+
+sankeyNetwork(Links = links2, Nodes = nodes,
+              Source = "source", Target = "target",
+              Value = "value", NodeID = "name")
+
+funk = subset(whole, genres == "funk")
+
+funk_merge = aggregate(freq ~ ngrams, data = funk,sum)  
+
+head(funk_merge)
+
+dim(funk_merge)
+
+funk_merge2 = funk_merge[rev(order(funk_merge$freq)),]
+
+head(funk_merge2)
+
+c1 = unique(funk_merge4[,1])
+
+c2 = unique(funk_merge4[,2])
+
+c3 = unique(funk_merge4[,3])
+
+c4 = unique(funk_merge4[,4])
+
+
+
+
+nodes = data.frame(name = c(c1,c2,c3,c4),stringsAsFactors = F)
+
+
+p1=match(funk_merge4[,1],c1) - 1
+p2= match(funk_merge4[,2],c2) - 1 + length(c1)
+p3= match(funk_merge4[,3],c3) - 1 + length(c1) + length(c2)
+p4 = match(funk_merge4[,4],c4) - 1 + length(c1) + length(c2) + length(c3)
+
+dt = rbind(
+  data.frame(a=p1, b=p2, d=funk_merge4[,5]) ,
+  data.frame(a=p2, b=p3, d=funk_merge4[,5])
+)
+
+
+dt2 = rbind(dt,
+            data.frame(a=p3, b=p4, d=funk_merge4[,5])
+)
+
+dt2[,3] = as.integer(as.character(dt2[,3]))
+
+
+
+links = dt2
+colnames(links) = c("source","target","value")
+
+
+links2 = aggregate(value ~ source + target, data = links, sum)
+
+sankeyNetwork(Links = links2, Nodes = nodes,
+              Source = "source", Target = "target",
+              Value = "value", NodeID = "name")
+
+```
+
