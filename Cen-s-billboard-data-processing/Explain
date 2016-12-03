@@ -1,10 +1,12 @@
 第一版数据：
-all.chord.original: 最原始的数据,斜杠，括号，数字均未进行过改动
+all.chord.original: 最原始的数据,斜杠，括号，数字均未进行过改动,共990段
+tonic.original: 990段旋律对应的tonic
+all.chord.original.sd: 将all.chord.original标准化到C大调，共990段
 
 第二版数据：
-tonic: 989段旋律各自对应的tonic,   unique(tonic) = 12
+tonic: 989段旋律各自对应的tonic, unique(tonic) = 12
 all.chord: 989段旋律的chord list，每段旋律的第一个元素对应歌曲编号（按文件名的编号）(所有chord都标准化过了，并且前后不重复)
 chord.dictionary: 标准化后，所有chord的种类（58种）
 
 第三版数据：
-all.chord.sd: 989段旋律标准化到C大调后的chord list
+all.chord.sd: 989段第二版旋律标准化到C大调后的chord list
