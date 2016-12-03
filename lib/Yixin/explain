@@ -1,1 +1,20 @@
 
+
+chord_use_n_grams:   n-grams for 872 matched songs in song use in cleaned_data.RData
+
+n=2,3,4
+
+They are lists with names using used songs'id
+
+
+
+
+generate:
+
+通过4-gram有一段音乐，通过风格分类，每个风格做n-gram。然后一个风格做一个generate。
+
+tfidf
+
+common的n-gram去掉 -  - 
+
+每个风格特定的一段和弦（tfidf）
