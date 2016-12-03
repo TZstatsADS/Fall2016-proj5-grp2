@@ -11,10 +11,10 @@ Term: Fall 2016
 	+ team member 4 Cen Zeng      (cz2379)
 	+ team member 5 Wanyi Zhang   (wz2323)
 + Project summary:
-    + Objective: Songwriting app (example name: Mozarobot)
+    + Objective: Songbase writing app MelodySoup
     + Chord progression
         + Sequence analysis: 
-            + n-gram: bigram, trigram, 4-gram
+            + n-gram: bigram, 4-gram
         + Objective: generate sequence with 4-grams
     + Visualization
         + use bigram to make circular plots
@@ -24,10 +24,14 @@ Term: Fall 2016
     + Cooccurrence analysis:
         + topic modeling: 4-gram as a word
         + read literature: 中文切词
-    + EDA: Most frequent chords/keys/4-grams by genres*/artists/albums
+    + EDA: 
+        + Genre popularity over time 
+        + Most frequent chords/keys/4-grams by genres
         + Pick specific genres/artists/albums for detailed demo (with sound)
-    + Generate music with chords and keys based on particular styles you want
-        + Do demo with actual sound	
+    + Results:
+        + predict the genre of a new song
+        + Generate music with chords and keys based on a particular genre you want
+            + Do demo with audio (add layers)
         
         
 + Dataset:
