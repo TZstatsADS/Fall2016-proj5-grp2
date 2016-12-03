@@ -31,15 +31,15 @@ save(chords4Gram,file = "chords4Gram.rdata")
 library(chorddiag)
 
 ##### For each song #####
-chord.str<-paste(all.chord[[1]][-1], collapse=" ") 
-NG<-ngram(chord.str, n=2)
-get.ngrams(NG)
-get.phrasetable(NG)
-chords2Gram[[4]][1,1]
+
+#chord.str<-paste(all.chord[[1]][-1], collapse=" ") 
+#NG<-ngram(chord.str, n=2)
+#get.phrasetable(NG)
+
 
 library(reshape2)
 #df <- data.frame(transform(chords2Gram[[4]], ngrams= colsplit(ngrams, pattern = '\\s', names = c('from', 'to'))))
-df <- chords2Gram[[4]]
+df <- chords2Gram[[100]]
 X<-with(df, cbind( colsplit(df$ngrams, pattern = "\\s", names = c('from', 'to')),freq))
 X$to <- gsub('\\s', '', X$to) #for consistency,remove the redundant space in each element of 2nd col
 tmp<-acast(X,from~to,value.var='freq')
@@ -58,10 +58,8 @@ Genres<-read.csv('with_genre.csv')
 library(dplyr)
 rock_id<-filter(Genres,Genre=='classic rock')[,'id']
 
-x<-all.chord[[1:2]][1]
 
-
-rock_chord<-list()
+rock_chord<-list() 
 j=1
 for(i in 1:length(all.chord)){
   if(as.numeric(all.chord[[i]][1]) %in% rock_id){
@@ -119,8 +117,89 @@ chorddiag(tmp,groupnameFontsize=8,groupnamePadding = 20,showTicks = FALSE)
 
 
 
-#rownames(tmp)[1] %in% colnames(tmp)
 
+
+
+################## for standardized data #################
+
+SD2Gram<-list()
+
+
+for(k in 1:length(all.chord.sd)){
+  sd.str<-paste(all.chord.sd[[k]][-1], collapse=" ") 
+  N2G<-ngram(sd.str, n=2)
+  SD2Gram[[k]]<-get.phrasetable(N2G)
+}
+
+
+
+## for each song ##
+df <- SD2Gram[[100]]
+X<-with(df, cbind( colsplit(df$ngrams, pattern = "\\s", names = c('from', 'to')),freq))
+X$to <- gsub('\\s', '', X$to) #for consistency,remove the redundant space in each element of 2nd col
+tmp<-acast(X,from~to,value.var='freq')
+tmp[is.na(tmp)]<-0
+
+dimnames(tmp) <- list(from = colnames(tmp), to = colnames(tmp))
+chorddiag(tmp,groupnameFontsize=12,groupnamePadding = 20)
+
+
+## grouped by genres
+
+rock_id<-filter(Genres,Genre=='classic rock')[,'id']
+
+rock_chord_sd<-list() 
+j=1
+for(i in 1:length(all.chord.sd)){
+  if(as.numeric(all.chord.sd[[i]][1]) %in% rock_id){
+    rock_chord_sd[[j]]<-all.chord.sd[[i]]
+    j<-j+1
+  }
+}
+
+#combine all chords in rock
+for(k in 1:length(rock_chord_sd)){
+  
+  tmp.str<-paste(rock_chord_sd[[k]][-1], collapse=" ") 
+  if(k==1){
+    rock.chord.sd.str<-tmp.str
+  }
+  else{
+    rock.chord.sd.str<-paste(rock.chord.sd.str,tmp.str)
+  }
+  rock.chord.sd.str<-paste(rock.chord.sd.str,"\n")
+}
+
+
+NG<-ngram(rock.chord.sd.str, n=2)
+RockSD2Gram<-get.phrasetable(NG)
+
+
+df<-RockSD2Gram
+X<-with(df, cbind( colsplit(df$ngrams, pattern = "\\s", names = c('from', 'to')),freq))
+X$to <- gsub('\\s', '', X$to)
+tmp<-acast(X,from~to,value.var='freq')
+tmp[is.na(tmp)]<-0
+dimnames(tmp) <- list(from = colnames(tmp), to = colnames(tmp))
+
+
+chorddiag(tmp,groupnameFontsize=8,groupnamePadding = 20,showTicks = FALSE)
+
+
+#############################################################
+### another package. compare ###
+library(circlize)
+df <- SD2Gram[[100]]
+X<-with(df, cbind( colsplit(df$ngrams, pattern = "\\s", names = c('from', 'to')),freq))
+X$to <- gsub('\\s', '', X$to) #for consistency,remove the redundant space in each element of 2nd col
+tmp<-acast(X,from~to,value.var='freq')
+tmp[is.na(tmp)]<-0
+
+dimnames(tmp) <- list(from = colnames(tmp), to = colnames(tmp))
+#static
+chordDiagram(tmp)
+#interactive 
+chorddiag(tmp,groupnameFontsize=12,groupnamePadding = 20)
 
 
 
