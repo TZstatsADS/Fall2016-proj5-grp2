@@ -1,0 +1,36 @@
+---
+title: "Genre combination"
+output: html_notebook
+---
+###########################################################################
+# Notice that wiki_genre is not complete. We need it to be complete first.
+###########################################################################
+```{r}
+with_genre = read.csv("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/with_genre.csv", na.strings = "Not Found")
+sort(table(with_genre$singer_genre), decreasing = T)
+# classic rock, soul, country, oldies, 80s, pop, rock, 60s, jazz, disco, rock n roll, blues
+```
+
+```{r}
+head(with_genre)
+sort(table(with_genre$wiki_genre), decreasing = T)
+```
+Country
+```{r}
+with_genre[grepl("ountry rock", with_genre$wiki_genre), 7:14]
+with_genre$Genre[785] <- "Country"
+```
+Change all *ock to Rock genre
+```{r}
+sort(table(grep("ock", with_genre$Genre, value = T)), decreasing = T)
+with_genre$Genre[grepl("ock", with_genre$Genre)] <- "Rock"
+sort(table(with_genre$Genre), decreasing = T)
+```
+Pop
+```{r}
+sort(table(grep("(P|p)op", with_genre$Genre, value = T)), decreasing = T)
+with_genre$Genre[grepl("(P|p)op", with_genre$Genre)] <- "Rock"
+
+```
+
+
