@@ -7,17 +7,16 @@ output: html_notebook
 http://musicmap.info/
 http://www.musicgenreslist.com/
 https://zumic.com/genres/
-
 ###########################################################################
+  
 ```{r}
 with_genre = read.csv("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/with_genre.csv")
-sort(table(with_genre$singer_genre), decreasing = T)
-# classic rock, soul, country, oldies, 80s, pop, rock, 60s, jazz, disco, rock n roll, blues
 ```
 
 ```{r}
 head(with_genre)
 sort(table(with_genre$wiki_genre), decreasing = T)
+# classic rock, soul, country, oldies, 80s, pop, rock, 60s, jazz, disco, rock n roll, blues
 ```
 
 Not Found
@@ -40,14 +39,16 @@ c("Rock", "Pop", "Pop", "Hard rock", "Rock", "Soul", "Pop", "Folk", "Jazz", "Roc
 Replace all "Not Found" terms
 ```{r}
 load("/Users/mushroomvv/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/genre_1.RData")
+load("/Users/mushroomvv/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/genre_2.RData")
+load("/Users/mushroomvv/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/genre_3.RData")
+load("/Users/mushroomvv/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/genre_4.RData")
+load("/Users/mushroomvv/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/genre_5.RData")
 genre_2 = Max
 genre_3 = genre_y$wiki_genre
 head(genre_y$wiki_genre)
 genre_4 = Cen
 
 NF = c(genre_1, genre_2, genre_3, genre_4, genre_5)
-NF[2]
-as.vector(NF)
 length(NF)
 
 # duplicate 'with_genre' table
@@ -84,6 +85,7 @@ Country includes country and bluegrass
 Genre[grepl("ountry", Genre$genre), 9]
 Genre$genre[grepl("ountry", Genre$genre)] <- "Country"
 Genre$genre[grepl("Bluegrass", Genre$genre)] <- "Country"
+sort(table(Genre$genre), decreasing = T)
 ```
 
 Rock includes all *ock, metal, punk, new wave
@@ -129,7 +131,7 @@ Genre$genre[grepl("R&B", Genre$genre)] <- "R&B"
 sort(table(grep("isco", Genre$genre, value = T)), decreasing = T)
 Genre$genre[grepl("isco", Genre$genre)] <- "R&B"
 
-Genre$genre[Genre$genre %in% c("R&B", "Rhythm and blues", "Soul", "Doo-wop", "Brill Building", "Reggae", "New jack swing", "Hi-NRG", "Dance", "Ska", "House")] <- "R&B/Soul"
+Genre$genre[Genre$genre %in% c("R&B", "Rhythm and blues", "Blues", "Soul", "Doo-wop", "Brill Building", "Reggae", "New jack swing", "Hi-NRG", "Dance", "Ska", "House")] <- "R&B/Soul"
 sort(table(Genre$genre), decreasing = T)
 ```
 
@@ -137,6 +139,7 @@ Jazz
 ```{r}
 sort(table(grep("azz", Genre$genre, value = T)), decreasing = T)
 Genre$genre[grepl("azz", Genre$genre)] <- "Jazz"
+sort(table(Genre$genre), decreasing = T)
 ```
 
 Others includes World, Vocal, Latin, Christmas, Holiday, 
