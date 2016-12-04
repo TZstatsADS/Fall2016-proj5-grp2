@@ -38,23 +38,26 @@ Manually classify "Not Found" genre:（数字代表歌曲文件id）
     
     
 
-
+用[第一版数据：
+all.chord.original: 最原始的数据,斜杠，括号，数字均未进行过改动,共990段
+tonic.original: 990段旋律对应的tonic
+all.chord.original.sd: 将all.chord.original标准化到C大调，共990段]
 
 
 Yixin:
 Use all.chord.original.sd data
 Combine all songs in specific genres then do 4-gram for each genre corpora
-use tf and tf-idf weights
+use tf and tf-idf (character) weights
 
 
 Kanghui:
 Use all.chord.original.sd data
-use tf and tf-idf weights
+use tf and tf-idf (character) weights
 
 
 Vivien:
 Design MelodySoup logo
-use tf-idf weights
+tf-idf weights
 Find algo to plot for next layer when clicking, not showing all layers 
 
 
