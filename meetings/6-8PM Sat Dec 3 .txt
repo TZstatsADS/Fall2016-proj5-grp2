@@ -38,14 +38,25 @@ Manually classify "Not Found" genre:（数字代表歌曲文件id）
     
     
 
-Vivien:
-Find algo to plot for next layer when clicking not all layers 
+
+
 
 Yixin:
-Use standarized 
-Combine all songs in specific genres then do 4-gram for each genre
+Use all.chord.original.sd data
+Combine all songs in specific genres then do 4-gram for each genre corpora
+use tf and tf-idf weights
+
 
 Kanghui:
+Use all.chord.original.sd data
+use tf and tf-idf weights
+
+
+Vivien:
+Design MelodySoup logo
+use tf-idf weights
+Find algo to plot for next layer when clicking, not showing all layers 
+
 
 Max: 
 Build Shiny app
