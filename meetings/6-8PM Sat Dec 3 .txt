@@ -37,11 +37,13 @@ Manually classify "Not Found" genre:（数字代表歌曲文件id）
     
     
     
+    
+Tasks:    
 
-用[第一版数据：
-all.chord.original: 最原始的数据,斜杠，括号，数字均未进行过改动,共990段
-tonic.original: 990段旋律对应的tonic
-all.chord.original.sd: 将all.chord.original标准化到C大调，共990段]
+# 用[第一版数据：
+# all.chord.original: 最原始的数据,斜杠，括号，数字均未进行过改动,共990段
+# tonic.original: 990段旋律对应的tonic
+# all.chord.original.sd: 将all.chord.original标准化到C大调，共990段]
 
 
 Yixin:
@@ -58,10 +60,13 @@ use tf and tf-idf (character) weights
 Vivien:
 Combine genres 
 Design MelodySoup logo
-tf-idf weights
+Find tf-idf weights
 Find possible algo to plot for next layer when clicking, not showing all layers 
-
 
 
 Max: 
 Build Shiny app
+
+
+Next meeting:
+6PM Sunday, Dec 4 @ School gate on Amsterdam Ave.
