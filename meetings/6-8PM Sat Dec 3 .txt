@@ -9,5 +9,14 @@ Manually classify "Not Found" genre:
     
     
 
+Vivien:
+Find algo to plot for next layer when clicking not all layers 
 
-Find algo to plot for next layers not all layers 
+Yixin:
+Use standarized 
+Combine all songs in specific genres then do 4-gram for each genre
+
+Kanghui:
+
+Max: 
+Build Shiny app
