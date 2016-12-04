@@ -176,8 +176,9 @@ $(document).ready(function () {
 <div id="section" class="section level75">
 <p></p>
 </div>
-<div id="notice-that-wiki_genre-is-not-complete.-we-need-it-to-be-complete-first." class="section level1">
-<h1>Notice that wiki_genre is not complete. We need it to be complete first.</h1>
+<div id="references" class="section level1">
+<h1>References:</h1>
+<p><a href="http://musicmap.info/" class="uri">http://musicmap.info/</a> <a href="http://www.musicgenreslist.com/" class="uri">http://www.musicgenreslist.com/</a> <a href="https://zumic.com/genres/" class="uri">https://zumic.com/genres/</a></p>
 <div id="section-1" class="section level75">
 <p></p>
 <!-- rnb-text-end -->
@@ -253,7 +254,7 @@ Golden age hip hop  Instrumental rock         Post-disco         Roots rock
 <!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Search for ‘Not Found’</p>
+<p>Manually search for ’Not Found’s actual genre</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVuZ3RoKGdlbnJlXzUpXG5cbmBgYCJ9 -->
@@ -266,40 +267,246 @@ Golden age hip hop  Instrumental rock         Post-disco         Roots rock
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>c(“Rock”, “Pop”, “Pop”, “Hard rock”, “Rock”, “Soul”, “Pop”, “Folk”, “Jazz”, “Rock”, “Hip hop”, “Rock”, “Country”, “Rock”, “Musical/Rmantic”, “Rock”, “Country”, Country pop“,”Rock“,”Pop“,”Jazz“,”Soul“,”Country“,”R&amp;B“,”Folk rock“,”Pop“,”Jazz“,”Rock n roll“,”Folk“,”Country“,”Rock“,”Country“,”R&amp;B“,”Rock“,”R&amp;B“,”Pop“,”R&amp;B“,”Rock“,”Rock“,”Alternative/Indie“,”Rock“,”R&amp;B“,”Country“,”Rock“,”Funk“,”Pop“,”Rock“,”R&amp;B“,”Pop“,”R&amp;B“,”Pop“,”Blues“,”Hard rock“,”Rock“,”Dance pop“,”R&amp;B“,”R&amp;B“,”Country“,”Rock“)</p>
-<p>Country</p>
+<p>Replace all “Not Found” terms</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2l0aF9nZW5yZVtncmVwbChcIm91bnRyeSByb2NrXCIsIHdpdGhfZ2VucmUkd2lraV9nZW5yZSksIDc6MTRdXG53aXRoX2dlbnJlJEdlbnJlWzc4NV0gPC0gXCJDb3VudHJ5XCJcbmBgYCJ9 -->
-<pre class="r"><code>with_genre[grepl(&quot;ountry rock&quot;, with_genre$wiki_genre), 7:14]
-with_genre$Genre[785] &lt;- &quot;Country&quot;</code></pre>
-<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6OSwibnJvdyI6OX0sInJkZiI6Ikg0c0lBQUFBQUFBQUE4VlUwVzdUTUJUTjBwWFJiTzBtN1FXa1BsZ0lJVjVTMG1wYld4RFMybFZUbVJhQk9nYmxxZklTcjdXYTJaWGpySFJQZkJJU1A4QWY4RFB3T3JoTzdhNkxtSkQyUXRUVGszdHlmZTE3cisxZXAxOXorbzVsV2JhVnk2MVlkZzVlVjIzNFc3RldyWUxpejVhVjI0WVhaUlExdndYZEExekJPTEJ0NE53cndCVHdDd0wwd0djcjlaMEhjYXJOdmJycjFkMWE4MFpwZXE2MzQ5WWEvMUlhYnJWNm96VHFxYy91YlorYVcvV1dmSnF1cDM1THlrN3FVODNPNWRXWHNtb0FIZ0VlQXo0QVhnREtnQURnQW80QkplVzc3MXZwcy84eXc2ZjdjKzVxKzdYbS92YzVIMnE3OThYU3ozS1Z0Zzk0RktLVEtjRVN1ZWdkRmhLWkJXKzlIeEhVVFM0bWNvWTZtQVhrbnZwR1crQTRSajVuWXpMVFd2RW9pU1Zxb1VOQkNRdTF1T2tUNU05aUVwMmpGZ3ZSbTBWY2VrSFFSeHBGcUVjdUNZNjB2dDZleC9ENUpjbGt0WDZFTDBpTTJvSlBtVW0wUTRkVTRnaWRzcENJb2VESll0NzdmZHBvRXh4TFNsQ2J6MkxUNHphOVFqNFdZMnFTZHpvRUhXTjB3aE96N0xVT09jTmlhQndlZm9LWVErUWZMQnBkMWcxN2RnZWJSai9SM05KYzAxdzJmZGJ4bm11OWZnYy8xYnludVpxSmQvRFhqYlBXcFJOM3hDZi96Yng5WmVTWjZuaG1qVFkxelhLQ0VXenRRWWlscWZ1NlZFMlFBNEhaMkVnNGtBbU9scVc4cERJeVF4NUFDQnBMYlJVbUJJK1hmVXRUUXNieGdMTkJPcG1KTUNSTWtNeHFDN0F4SzJiRjVpcFE5ZjRCUHF1QUVQQVZFb0FMem9hcndQNEcrSmxOT1lqZ1hPbVVqZWhBaXJoeUxpQTJXTmVaSVd0OElpbG5NTWhXMTJzK00zaEZaSVROaEtsVmhtNHdTdGpZVlR2RFNUL1BVZFJjdVAydXByUi82MUI1VXp6Q2hwU1pVdVlqZkViTWlTaXBZNnFLVVprSXlremhIRkRqaXVSeWNlQ2RnRWRHU1hPenJ2OEFudVNrMzB3R0FBQT0ifQ== -->
+<div data-pagedtable>
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["id"],"name":[1],"type":["int"],"align":["right"]},{"label":["chart_date"],"name":[2],"type":["chr"],"align":["left"]},{"label":["target_rank"],"name":[3],"type":["int"],"align":["right"]},{"label":["actual_rank"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["title"],"name":[5],"type":["chr"],"align":["left"]},{"label":["artist"],"name":[6],"type":["chr"],"align":["left"]},{"label":["peak_rank"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["weeks_on_chart"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["genre"],"name":[9],"type":["chr"],"align":["left"]}],"data":[{"1":"79","2":"1967-07-29","3":"56","4":"58","5":"Cold Sweat - Part 1","6":"James Brown","7":"7","8":"12","9":"Hip-hop","_rn_":"50"},{"1":"304","2":"1990-04-28","3":"24","4":"26","5":"The Humpty Dance","6":"Digital Underground","7":"11","8":"23","9":"Hip-hop","_rn_":"207"},{"1":"378","2":"1990-04-28","3":"25","4":"26","5":"The Humpty Dance","6":"Digital Underground","7":"11","8":"23","9":"Hip-hop","_rn_":"260"},{"1":"521","2":"1990-08-11","3":"86","4":"85","5":"The Humpty Dance","6":"Digital Underground","7":"11","8":"23","9":"Hip-hop","_rn_":"356"},{"1":"634","2":"1987-04-25","3":"47","4":"48","5":"Brass Monkey","6":"Beastie Boys","7":"48","8":"10","9":"Hip-hop","_rn_":"432"},{"1":"827","2":"1990-02-10","3":"28","4":"29","5":"Just A Friend","6":"Biz Markie","7":"9","8":"22","9":"Hip-hop","_rn_":"571"},{"1":"887","2":"1989-09-09","3":"99","4":"99","5":"Me Myself And I","6":"De La Soul","7":"34","8":"17","9":"Hip-hop","_rn_":"611"},{"1":"1013","2":"1984-02-11","3":"45","4":"44","5":"Time Will Reveal","6":"Debarge","7":"18","8":"18","9":"Hip-hop","_rn_":"691"},{"1":"1106","2":"1990-04-07","3":"76","4":"74","5":"Bust A Move","6":"Young MC","7":"7","8":"39","9":"Hip-hop","_rn_":"756"}],"options":{"columns":{"min":{},"max":[10],"total":[9]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Change all *ock to Rock genre</p>
+<p>Country includes country and bluegrass</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29ydCh0YWJsZShncmVwKFwib2NrXCIsIHdpdGhfZ2VucmUkR2VucmUsIHZhbHVlID0gVCkpLCBkZWNyZWFzaW5nID0gVClcbndpdGhfZ2VucmUkR2VucmVbZ3JlcGwoXCJvY2tcIiwgd2l0aF9nZW5yZSRHZW5yZSldIDwtIFwiUm9ja1wiXG5zb3J0KHRhYmxlKHdpdGhfZ2VucmUkR2VucmUpLCBkZWNyZWFzaW5nID0gVClcbmBgYCJ9 -->
-<pre class="r"><code>sort(table(grep(&quot;ock&quot;, with_genre$Genre, value = T)), decreasing = T)
-with_genre$Genre[grepl(&quot;ock&quot;, with_genre$Genre)] &lt;- &quot;Rock&quot;
-sort(table(with_genre$Genre), decreasing = T)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuR2VucmVbZ3JlcGwoXCJvdW50cnlcIiwgR2VucmUkZ2VucmUpLCA5XVxuXG5gYGAifQ== -->
+<pre class="r"><code>Genre[grepl(&quot;ountry&quot;, Genre$genre), 9]
+</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIlxuIFs5XSBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIlxuWzE3XSBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIlxuWzI1XSBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIlxuWzMzXSBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIlxuWzQxXSBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIlxuWzQ5XSBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIlxuWzU3XSBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIlxuWzY1XSBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIlxuWzczXSBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIlxuWzgxXSBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIiBcIkNvdW50cnlcIlxuIn0= -->
+<pre><code> [1] &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot;
+ [9] &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot;
+[17] &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot;
+[25] &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot;
+[33] &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot;
+[41] &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot;
+[49] &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot;
+[57] &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot;
+[65] &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot;
+[73] &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot;
+[81] &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot; &quot;Country&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rock includes all *ock, metal, punk, new wave</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29ydCh0YWJsZShHZW5yZSRnZW5yZSksIGRlY3JlYXNpbmcgPSBUKVxuXG5gYGAifQ== -->
+<pre class="r"><code>sort(table(Genre$genre), decreasing = T)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gICAgICAgICAgICAgIFJvY2sgICAgICAgICAgICAgICAgUG9wICAgICAgICAgICAgICAgIFImQiAgICAgICAgICAgIENvdW50cnkgXG4gICAgICAgICAgICAgICAzNDkgICAgICAgICAgICAgICAgMTU3ICAgICAgICAgICAgICAgIDEwMiAgICAgICAgICAgICAgICAgOTAgXG4gICAgICAgICAgICAgIFNvdWwgICAgICAgICAgIE5ldyB3YXZlICAgUmh5dGhtIGFuZCBibHVlcyAgICAgICAgICAgICAgQmx1ZXMgXG4gICAgICAgICAgICAgICAgODAgICAgICAgICAgICAgICAgIDE2ICAgICAgICAgICAgICAgICAxNSAgICAgICAgICAgICAgICAgMTIgXG4gICAgICAgICAgICAgIEphenogICAgICAgICAgICBIaXAtaG9wICAgICAgICAgICAgRG9vLXdvcCAgICAgICAgICAgICAgIEZvbGsgXG4gICAgICAgICAgICAgICAgMTEgICAgICAgICAgICAgICAgICA5ICAgICAgICAgICAgICAgICAgNSAgICAgICAgICAgICAgICAgIDQgXG4gICAgICAgICAgICAgTGFiZWwgICAgICAgICAgICAgIFdvcmxkICAgICAgICAgICAgICBEYW5jZSAgICAgICAgIEZvbGsgbXVzaWMgXG4gICAgICAgICAgICAgICAgIDQgICAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgICAgICAgSG91c2UgICAgICAgIEphenogZnVzaW9uICAgICAgICAgICAgICAgIFNrYSAgICAgICAgICAgICAgVm9jYWwgXG4gICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgIDIgXG5BZHVsdCBjb250ZW1wb3JhcnkgICAgICAgIEFsdGVybmF0aXZlICBBbHRlcm5hdGl2ZS9JbmRpZSAgICAgQnJpbGwgQnVpbGRpbmcgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgQ2FyIHNvbmcgICAgICAgICAgQ2hyaXN0bWFzICBDb250ZW1wb3JhcnkgZm9sayAgICAgICAgICAgICBIaS1OUkcgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgIEhvbGlkYXkgICAgICAgICAgICBKYW1iYW5kICAgICAgICAgICAgTGFtYmFkYSAgICAgICAgICAgICAgTGF0aW4gXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgIE1lcnNleWJlYXQgICAgTXVzaWNhbC9SbWFudGljICAgICAgICAgICBNdXNpY2FscyAgICAgTmV3IGphY2sgc3dpbmcgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICBQb3dlciBiYWxsYWQgICAgICAgICAgICAgUmVnZ2FlICAgICAgICBTbW9vdGggamF6eiAgICAgICAgIFZvY2FsIGphenogXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4ifQ== -->
+<pre><code>
+              Rock                Pop                R&amp;B            Country 
+               349                157                102                 90 
+              Soul           New wave   Rhythm and blues              Blues 
+                80                 16                 15                 12 
+              Jazz            Hip-hop            Doo-wop               Folk 
+                11                  9                  5                  4 
+             Label              World              Dance         Folk music 
+                 4                  4                  2                  2 
+             House        Jazz fusion                Ska              Vocal 
+                 2                  2                  2                  2 
+Adult contemporary        Alternative  Alternative/Indie     Brill Building 
+                 1                  1                  1                  1 
+          Car song          Christmas  Contemporary folk             Hi-NRG 
+                 1                  1                  1                  1 
+           Holiday            Jamband            Lambada              Latin 
+                 1                  1                  1                  1 
+        Merseybeat    Musical/Rmantic           Musicals     New jack swing 
+                 1                  1                  1                  1 
+      Power ballad             Reggae        Smooth jazz         Vocal jazz 
+                 1                  1                  1                  1 </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Pop</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29ydCh0YWJsZShncmVwKFwiKFB8cClvcFwiLCB3aXRoX2dlbnJlJEdlbnJlLCB2YWx1ZSA9IFQpKSwgZGVjcmVhc2luZyA9IFQpXG53aXRoX2dlbnJlJEdlbnJlW2dyZXBsKFwiKFB8cClvcFwiLCB3aXRoX2dlbnJlJEdlbnJlKV0gPC0gXCJSb2NrXCJcblxuYGBgIn0= -->
-<pre class="r"><code>sort(table(grep(&quot;(P|p)op&quot;, with_genre$Genre, value = T)), decreasing = T)
-with_genre$Genre[grepl(&quot;(P|p)op&quot;, with_genre$Genre)] &lt;- &quot;Rock&quot;
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29ydCh0YWJsZShHZW5yZSRnZW5yZSksIGRlY3JlYXNpbmcgPSBUKVxuXG5gYGAifQ== -->
+<pre class="r"><code>sort(table(Genre$genre), decreasing = T)
 </code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gICAgICAgICAgICAgIFJvY2sgICAgICAgICAgICAgICAgUG9wICAgICAgICAgICAgQ291bnRyeSAgICAgICAgICAgICAgICBSJkIgXG4gICAgICAgICAgICAgICAzMzkgICAgICAgICAgICAgICAgMTU3ICAgICAgICAgICAgICAgICA4OCAgICAgICAgICAgICAgICAgNTcgXG4gICAgICAgICAgICAgIFNvdWwgICAgICAgICAgICAgIERpc2NvICAgICAgICAgICAgICAgRnVuayAgICAgICAgICAgTmV3IHdhdmUgXG4gICAgICAgICAgICAgICAgNTIgICAgICAgICAgICAgICAgIDI0ICAgICAgICAgICAgICAgICAxNiAgICAgICAgICAgICAgICAgMTYgXG4gIFJoeXRobSBhbmQgYmx1ZXMgICAgICAgICAgICAgIEJsdWVzICAgICAgIENsYXNzaWMgc291bCAgICAgICAgICAgICAgIEphenogXG4gICAgICAgICAgICAgICAgMTUgICAgICAgICAgICAgICAgIDEyICAgICAgICAgICAgICAgICAxMiAgICAgICAgICAgICAgICAgMTEgXG4gIFBzeWNoZWRlbGljIHNvdWwgICAgIEJsdWUtZXllZCBzb3VsICAgICAgICAgICAgRG9vLXdvcCAgICAgICAgICAgICAgIEZvbGsgXG4gICAgICAgICAgICAgICAgIDYgICAgICAgICAgICAgICAgICA1ICAgICAgICAgICAgICAgICAgNSAgICAgICAgICAgICAgICAgIDQgXG4gICAgICAgICAgICAgTGFiZWwgICAgICAgICAgICAgIFdvcmxkIEdvbGRlbiBhZ2UgaGlwIGhvcCAgICAgICAgIFBvc3QtZGlzY28gXG4gICAgICAgICAgICAgICAgIDQgICAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAgMyAgICAgICAgICAgICAgICAgIDMgXG4gICAgICAgICAgICAgICBbMV0gICAgICAgICAgQmx1ZWdyYXNzICAgICAgICAgICAgICBEYW5jZSAgICAgICAgIEZvbGsgbXVzaWMgXG4gICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgSGVhdnkgbWV0YWwgICAgICAgICAgICBIaXAgaG9wICAgICAgICAgICAgICBIb3VzZSAgICAgICAgSmF6eiBmdXNpb24gXG4gICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgICAgICAgICBTa2EgICAgICAgICAgICAgIFZvY2FsIEFkdWx0IGNvbnRlbXBvcmFyeSAgICAgICAgQWx0ZXJuYXRpdmUgXG4gICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gQWx0ZXJuYXRpdmUvSW5kaWUgICAgIEJyaWxsIEJ1aWxkaW5nICAgICAgICAgICBDYXIgc29uZyAgICAgICAgICBDaHJpc3RtYXMgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgQ2xhc3NpY2FsIHNvdWwgICAgIENvbWVkeSBoaXAgaG9wICBDb250ZW1wb3JhcnkgZm9sayAgIENvbnRlbXBvcmFyeSBSJkIgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgIEdsYW0gbWV0YWwgICAgICAgICAgICAgSGktTlJHICAgICAgICAgICAgSGlwLWhvcCAgICAgICAgSGlwLWhvcC9yYXAgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgIEhvbGlkYXkgICAgICAgICAgICBKYW1iYW5kICAgICAgICAgICAgTGFtYmFkYSAgICAgICAgICAgICAgTGF0aW4gXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgIE1lcnNleWJlYXQgICAgTXVzaWNhbC9SbWFudGljICAgICAgICAgICBNdXNpY2FscyAgICAgTmV3IGphY2sgc3dpbmcgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgIE5vcnRoZXJuIHNvdWwgICAgICAgICAgUG9zdC1wdW5rICAgICAgIFBvd2VyIGJhbGxhZCAgUHJvZ3Jlc3NpdmUgbWV0YWwgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgIFB1bmsgICAgICAgICAgICAgUmVnZ2FlICAgICAgICBTbW9vdGggamF6eiAgICAgICAgICAgICAgIHNvdWwgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgIFNvdWwgYmx1ZXMgICAgICBTb3V0aGVybiBzb3VsICAgIFN5bXBob25pYyBtZXRhbCAgICAgICAgIFN5bnRoLWZ1bmsgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICBUaHJhc2ggbWV0YWwgICAgICAgICBWb2NhbCBqYXp6IFdlc3QgQ29hc3QgaGlwIGhvcCBcbiAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxIFxuIn0= -->
+<pre><code>
+              Rock                Pop            Country                R&amp;B 
+               339                157                 88                 57 
+              Soul              Disco               Funk           New wave 
+                52                 24                 16                 16 
+  Rhythm and blues              Blues       Classic soul               Jazz 
+                15                 12                 12                 11 
+  Psychedelic soul     Blue-eyed soul            Doo-wop               Folk 
+                 6                  5                  5                  4 
+             Label              World Golden age hip hop         Post-disco 
+                 4                  4                  3                  3 
+               [1]          Bluegrass              Dance         Folk music 
+                 2                  2                  2                  2 
+       Heavy metal            Hip hop              House        Jazz fusion 
+                 2                  2                  2                  2 
+               Ska              Vocal Adult contemporary        Alternative 
+                 2                  2                  1                  1 
+ Alternative/Indie     Brill Building           Car song          Christmas 
+                 1                  1                  1                  1 
+    Classical soul     Comedy hip hop  Contemporary folk   Contemporary R&amp;B 
+                 1                  1                  1                  1 
+        Glam metal             Hi-NRG            Hip-hop        Hip-hop/rap 
+                 1                  1                  1                  1 
+           Holiday            Jamband            Lambada              Latin 
+                 1                  1                  1                  1 
+        Merseybeat    Musical/Rmantic           Musicals     New jack swing 
+                 1                  1                  1                  1 
+     Northern soul          Post-punk       Power ballad  Progressive metal 
+                 1                  1                  1                  1 
+              Punk             Reggae        Smooth jazz               soul 
+                 1                  1                  1                  1 
+        Soul blues      Southern soul    Symphonic metal         Synth-funk 
+                 1                  1                  1                  1 
+      Thrash metal         Vocal jazz West Coast hip hop 
+                 1                  1                  1 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Soul</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29ydCh0YWJsZShHZW5yZSRnZW5yZSksIGRlY3JlYXNpbmcgPSBUKVxuXG5gYGAifQ== -->
+<pre class="r"><code>sort(table(Genre$genre), decreasing = T)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gICAgICAgICAgICAgIFJvY2sgICAgICAgICAgICAgICAgUG9wICAgICAgICAgICAgQ291bnRyeSAgICAgICAgICAgICAgIFNvdWwgXG4gICAgICAgICAgICAgICAzMzkgICAgICAgICAgICAgICAgMTU3ICAgICAgICAgICAgICAgICA4OCAgICAgICAgICAgICAgICAgODAgXG4gICAgICAgICAgICAgICBSJkIgICAgICAgICAgICAgIERpc2NvICAgICAgICAgICAgICAgRnVuayAgICAgICAgICAgTmV3IHdhdmUgXG4gICAgICAgICAgICAgICAgNTcgICAgICAgICAgICAgICAgIDI0ICAgICAgICAgICAgICAgICAxNiAgICAgICAgICAgICAgICAgMTYgXG4gIFJoeXRobSBhbmQgYmx1ZXMgICAgICAgICAgICAgIEJsdWVzICAgICAgICAgICAgICAgSmF6eiAgICAgICAgICAgIERvby13b3AgXG4gICAgICAgICAgICAgICAgMTUgICAgICAgICAgICAgICAgIDEyICAgICAgICAgICAgICAgICAxMSAgICAgICAgICAgICAgICAgIDUgXG4gICAgICAgICAgICAgIEZvbGsgICAgICAgICAgICAgIExhYmVsICAgICAgICAgICAgICBXb3JsZCBHb2xkZW4gYWdlIGhpcCBob3AgXG4gICAgICAgICAgICAgICAgIDQgICAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAgNCAgICAgICAgICAgICAgICAgIDMgXG4gICAgICAgIFBvc3QtZGlzY28gICAgICAgICAgICAgICAgWzFdICAgICAgICAgIEJsdWVncmFzcyAgICAgICAgICAgICAgRGFuY2UgXG4gICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgIEZvbGsgbXVzaWMgICAgICAgIEhlYXZ5IG1ldGFsICAgICAgICAgICAgSGlwIGhvcCAgICAgICAgICAgICAgSG91c2UgXG4gICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgSmF6eiBmdXNpb24gICAgICAgICAgICAgICAgU2thICAgICAgICAgICAgICBWb2NhbCBBZHVsdCBjb250ZW1wb3JhcnkgXG4gICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgQWx0ZXJuYXRpdmUgIEFsdGVybmF0aXZlL0luZGllICAgICBCcmlsbCBCdWlsZGluZyAgICAgICAgICAgQ2FyIHNvbmcgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICBDaHJpc3RtYXMgICAgIENvbWVkeSBoaXAgaG9wICBDb250ZW1wb3JhcnkgZm9sayAgIENvbnRlbXBvcmFyeSBSJkIgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgIEdsYW0gbWV0YWwgICAgICAgICAgICAgSGktTlJHICAgICAgICAgICAgSGlwLWhvcCAgICAgICAgSGlwLWhvcC9yYXAgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgIEhvbGlkYXkgICAgICAgICAgICBKYW1iYW5kICAgICAgICAgICAgTGFtYmFkYSAgICAgICAgICAgICAgTGF0aW4gXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgIE1lcnNleWJlYXQgICAgTXVzaWNhbC9SbWFudGljICAgICAgICAgICBNdXNpY2FscyAgICAgTmV3IGphY2sgc3dpbmcgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICBQb3N0LXB1bmsgICAgICAgUG93ZXIgYmFsbGFkICBQcm9ncmVzc2l2ZSBtZXRhbCAgICAgICAgICAgICAgIFB1bmsgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICBSZWdnYWUgICAgICAgIFNtb290aCBqYXp6ICAgIFN5bXBob25pYyBtZXRhbCAgICAgICAgIFN5bnRoLWZ1bmsgXG4gICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgXG4gICAgICBUaHJhc2ggbWV0YWwgICAgICAgICBWb2NhbCBqYXp6IFdlc3QgQ29hc3QgaGlwIGhvcCBcbiAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAxIFxuIn0= -->
+<pre><code>
+              Rock                Pop            Country               Soul 
+               339                157                 88                 80 
+               R&amp;B              Disco               Funk           New wave 
+                57                 24                 16                 16 
+  Rhythm and blues              Blues               Jazz            Doo-wop 
+                15                 12                 11                  5 
+              Folk              Label              World Golden age hip hop 
+                 4                  4                  4                  3 
+        Post-disco                [1]          Bluegrass              Dance 
+                 3                  2                  2                  2 
+        Folk music        Heavy metal            Hip hop              House 
+                 2                  2                  2                  2 
+       Jazz fusion                Ska              Vocal Adult contemporary 
+                 2                  2                  2                  1 
+       Alternative  Alternative/Indie     Brill Building           Car song 
+                 1                  1                  1                  1 
+         Christmas     Comedy hip hop  Contemporary folk   Contemporary R&amp;B 
+                 1                  1                  1                  1 
+        Glam metal             Hi-NRG            Hip-hop        Hip-hop/rap 
+                 1                  1                  1                  1 
+           Holiday            Jamband            Lambada              Latin 
+                 1                  1                  1                  1 
+        Merseybeat    Musical/Rmantic           Musicals     New jack swing 
+                 1                  1                  1                  1 
+         Post-punk       Power ballad  Progressive metal               Punk 
+                 1                  1                  1                  1 
+            Reggae        Smooth jazz    Symphonic metal         Synth-funk 
+                 1                  1                  1                  1 
+      Thrash metal         Vocal jazz West Coast hip hop 
+                 1                  1                  1 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Hip-hop</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29ydCh0YWJsZShHZW5yZSRnZW5yZSksIGRlY3JlYXNpbmcgPSBUKVxuXG5gYGAifQ== -->
+<pre class="r"><code>sort(table(Genre$genre), decreasing = T)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gICAgICAgICAgUm9jayAgICAgICBSJkIvU291bCAgICAgICAgICAgIFBvcCAgICAgICAgQ291bnRyeSAgICAgICAgICAgSmF6eiBcbiAgICAgICAgICAgMzY5ICAgICAgICAgICAgMjAzICAgICAgICAgICAgMTU3ICAgICAgICAgICAgIDkwICAgICAgICAgICAgIDE2IFxuICAgICAgICBPdGhlcnMgICAgICAgICAgQmx1ZXMgICAgICAgIEhpcC1ob3AgICAgICAgICAgIEZvbGsgICAgICAgICAgRGFuY2UgXG4gICAgICAgICAgICAxMyAgICAgICAgICAgICAxMiAgICAgICAgICAgICAgOSAgICAgICAgICAgICAgNyAgICAgICAgICAgICAgMiBcbiAgICAgICAgIEhvdXNlICAgICAgICAgICAgU2thICAgICAgICAgSGktTlJHICAgICAgICBKYW1iYW5kICAgICAgICBMYW1iYWRhIFxuICAgICAgICAgICAgIDIgICAgICAgICAgICAgIDIgICAgICAgICAgICAgIDEgICAgICAgICAgICAgIDEgICAgICAgICAgICAgIDEgXG4gICAgTWVyc2V5YmVhdCBOZXcgamFjayBzd2luZyAgIFBvd2VyIGJhbGxhZCAgICAgICAgICAgIFImQiAgICAgICAgIFJlZ2dhZSBcbiAgICAgICAgICAgICAxICAgICAgICAgICAgICAxICAgICAgICAgICAgICAxICAgICAgICAgICAgICAxICAgICAgICAgICAgICAxIFxuIn0= -->
+<pre><code>
+          Rock       R&amp;B/Soul            Pop        Country           Jazz 
+           369            203            157             90             16 
+        Others          Blues        Hip-hop           Folk          Dance 
+            13             12              9              7              2 
+         House            Ska         Hi-NRG        Jamband        Lambada 
+             2              2              1              1              1 
+    Merseybeat New jack swing   Power ballad            R&amp;B         Reggae 
+             1              1              1              1              1 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Folk</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29ydCh0YWJsZShncmVwKFwib2xrXCIsIEdlbnJlJGdlbnJlLCB2YWx1ZSA9IFQpKSwgZGVjcmVhc2luZyA9IFQpXG5cbmBgYCJ9 -->
+<pre class="r"><code>sort(table(grep(&quot;olk&quot;, Genre$genre, value = T)), decreasing = T)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gICAgICAgICAgICAgRm9sayAgICAgICAgRm9sayBtdXNpYyBDb250ZW1wb3JhcnkgZm9sayBcbiAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAxIFxuIn0= -->
+<pre><code>
+             Folk        Folk music Contemporary folk 
+                4                 2                 1 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>R&amp;B/Soul includes R&amp;B, Soul, Funk, Urban,</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29ydCh0YWJsZShHZW5yZSRnZW5yZSksIGRlY3JlYXNpbmcgPSBUKVxuXG5gYGAifQ== -->
+<pre class="r"><code>sort(table(Genre$genre), decreasing = T)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gICAgUm9jayBSJkIvU291bCAgICAgIFBvcCAgQ291bnRyeSAgICAgSmF6eiAgIE90aGVycyAgICBCbHVlcyAgSGlwLWhvcCAgICAgRm9sayBcbiAgICAgMzcyICAgICAgMjEzICAgICAgMTU4ICAgICAgIDkwICAgICAgIDE2ICAgICAgIDEzICAgICAgIDEyICAgICAgICA5ICAgICAgICA3IFxuIn0= -->
+<pre><code>
+    Rock R&amp;B/Soul      Pop  Country     Jazz   Others    Blues  Hip-hop     Folk 
+     372      213      158       90       16       13       12        9        7 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Jazz</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29ydCh0YWJsZShncmVwKFwidXNpY2FsXCIsIEdlbnJlJGdlbnJlLCB2YWx1ZSA9IFQpKSwgZGVjcmVhc2luZyA9IFQpXG5cbmBgYCJ9 -->
+<pre class="r"><code>sort(table(grep(&quot;usical&quot;, Genre$genre, value = T)), decreasing = T)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5NdXNpY2FsL1JtYW50aWMgICAgICAgIE11c2ljYWxzIFxuICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgMSBcbiJ9 -->
+<pre><code>
+Musical/Rmantic        Musicals 
+              1               1 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Others includes World, Vocal, Latin, Christmas, Holiday,</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29ydCh0YWJsZShHZW5yZSRnZW5yZSksIGRlY3JlYXNpbmcgPSBUKVxuXG5gYGAifQ== -->
+<pre class="r"><code>sort(table(Genre$genre), decreasing = T)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gICAgUm9jayBSJkIvU291bCAgICAgIFBvcCAgQ291bnRyeSAgICAgSmF6eiAgIE90aGVycyAgICBCbHVlcyAgSGlwLWhvcCAgICAgRm9sayBcbiAgICAgMzcyICAgICAgMjEzICAgICAgMTU4ICAgICAgIDkwICAgICAgIDE2ICAgICAgIDEzICAgICAgIDEyICAgICAgICA5ICAgICAgICA3IFxuIn0= -->
+<pre><code>
+    Rock R&amp;B/Soul      Pop  Country     Jazz   Others    Blues  Hip-hop     Folk 
+     372      213      158       90       16       13       12        9        7 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Save to final_genre.csv</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiR2VucmUgY29tYmluYXRpb24iCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCiMgTm90aWNlIHRoYXQgd2lraV9nZW5yZSBpcyBub3QgY29tcGxldGUuIFdlIG5lZWQgaXQgdG8gYmUgY29tcGxldGUgZmlyc3QuCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwpgYGB7cn0Kd2l0aF9nZW5yZSA9IHJlYWQuY3N2KCJ+L0dvb2dsZSBEcml2ZS9Db2x1bWJpYS81MjQzIEFEUy9BRFMgUHJvaiA1L0ZhbGwyMDE2LXByb2o1LWdycDIvZGF0YS9CaWxsYm9hcmQvd2l0aF9nZW5yZS5jc3YiKQpzb3J0KHRhYmxlKHdpdGhfZ2VucmUkc2luZ2VyX2dlbnJlKSwgZGVjcmVhc2luZyA9IFQpCiMgY2xhc3NpYyByb2NrLCBzb3VsLCBjb3VudHJ5LCBvbGRpZXMsIDgwcywgcG9wLCByb2NrLCA2MHMsIGphenosIGRpc2NvLCByb2NrIG4gcm9sbCwgYmx1ZXMKYGBgCgpgYGB7cn0KaGVhZCh3aXRoX2dlbnJlKQpzb3J0KHRhYmxlKHdpdGhfZ2VucmUkd2lraV9nZW5yZSksIGRlY3JlYXNpbmcgPSBUKQpgYGAKCk5vdCBGb3VuZApgYGB7cn0Kd2l0aF9nZW5yZVtncmVwbCgiTm90IEZvdW5kIiwgd2l0aF9nZW5yZSR3aWtpX2dlbnJlKSwgODo5XQp3aXRoX2dlbnJlW2dyZXBsKCJOb3QgRm91bmQiLCB3aXRoX2dlbnJlJHdpa2lfZ2VucmUpLCBdCmBgYAoKU2VhcmNoIGZvciAnTm90IEZvdW5kJwpgYGB7cn0Kd2l0aF9nZW5yZVt3aXRoX2dlbnJlJGlkICVpbiUgYygxMDYzLCAxMDY3LCAxMDY5LCAxMDcwLCAxMDcxLCAxMDc4LCAxMDg0LCAxMDg3LCAxMDk5LCAxMTAxLCAxMTA2LCAxMTEwLCAxMTEzLCAxMTE2LCAxMTE4LCAxMTE5LCAxMTIwLCAxMTIzLCAxMTI0LCAxMTI3LCAxMTMyLCAxMTM0LCAxMTM1LCAxMTQ1LCAxMTQ2LCAxMTQ3LCAxMTQ5LCAxMTUyLCAxMTUzLCAxMTU0LCAxMTU1LCAxMTYwLCAxMTY2LCAxMTc0LCAxMTc3LCAxMTg4LCAxMTkyLCAxMTk3LCAxMjAwLCAxMjAzLCAxMjA4LCAxMjIxLCAxMjI1LCAxMjI3LCAxMjM1LCAxMjM3LCAxMjQ2LCAxMjQ3LCAxMjQ4LCAxMjUwLCAxMjUzLCAxMjYzLCAxMjY3LCAxMjY5LCAxMjc5LCAxMjgwLCAxMjgzLCAxMjg3LCAxMjk3KSwgYyg4OjksIDEyOjEzKV0KZ2VucmVfNSA9IGMoIlJvY2siLCAiUG9wIiwgIlBvcCIsICJIYXJkIHJvY2siLCAiUm9jayIsICJTb3VsIiwgIlBvcCIsICJGb2xrIiwgIkphenoiLCAiUm9jayIsICJIaXAgaG9wIiwgIlJvY2siLCAiQ291bnRyeSIsICJSb2NrIiwgIk11c2ljYWwvUm1hbnRpYyIsICJSb2NrIiwgIkNvdW50cnkiLCAiQ291bnRyeSBwb3AiLCAiUm9jayIsICJQb3AiLCAiSmF6eiIsICJTb3VsIiwgIkNvdW50cnkiLCAiUiZCIiwgIkZvbGsgcm9jayIsICJQb3AiLCAiSmF6eiIsICJSb2NrIG4gcm9sbCIsICJGb2xrIiwgIkNvdW50cnkiLCAiUm9jayIsICJDb3VudHJ5IiwgIlImQiIsICJSb2NrIiwgIlImQiIsICJQb3AiLCAiUiZCIiwgIlJvY2siLCAiUm9jayIsICJBbHRlcm5hdGl2ZS9JbmRpZSIsICJSb2NrIiwgIlImQiIsICJDb3VudHJ5IiwgIlJvY2siLCAiRnVuayIsICJQb3AiLCAiUm9jayIsICJSJkIiLCAiUG9wIiwgIlImQiIsICJQb3AiLCAiQmx1ZXMiLCAiSGFyZCByb2NrIiwgIlJvY2siLCAiRGFuY2UgcG9wIiwgIlImQiIsICJSJkIiLCAiQ291bnRyeSIsICJSb2NrIikKbGVuZ3RoKGdlbnJlXzUpICMgNTkKYGBgCmMoIlJvY2siLCAiUG9wIiwgIlBvcCIsICJIYXJkIHJvY2siLCAiUm9jayIsICJTb3VsIiwgIlBvcCIsICJGb2xrIiwgIkphenoiLCAiUm9jayIsICJIaXAgaG9wIiwgIlJvY2siLCAiQ291bnRyeSIsICJSb2NrIiwgIk11c2ljYWwvUm1hbnRpYyIsICJSb2NrIiwgIkNvdW50cnkiLCBDb3VudHJ5IHBvcCIsICJSb2NrIiwgIlBvcCIsICJKYXp6IiwgIlNvdWwiLCAiQ291bnRyeSIsICJSJkIiLCAiRm9sayByb2NrIiwgIlBvcCIsICJKYXp6IiwgIlJvY2sgbiByb2xsIiwgIkZvbGsiLCAiQ291bnRyeSIsICJSb2NrIiwgIkNvdW50cnkiLCAiUiZCIiwgIlJvY2siLCAiUiZCIiwgIlBvcCIsICJSJkIiLCAiUm9jayIsICJSb2NrIiwgIkFsdGVybmF0aXZlL0luZGllIiwgIlJvY2siLCAiUiZCIiwgIkNvdW50cnkiLCAiUm9jayIsICJGdW5rIiwgIlBvcCIsICJSb2NrIiwgIlImQiIsICJQb3AiLCAiUiZCIiwgIlBvcCIsICJCbHVlcyIsICJIYXJkIHJvY2siLCAiUm9jayIsICJEYW5jZSBwb3AiLCAiUiZCIiwgIlImQiIsICJDb3VudHJ5IiwgIlJvY2siKQoKCgoKQ291bnRyeQpgYGB7cn0Kd2l0aF9nZW5yZVtncmVwbCgib3VudHJ5IHJvY2siLCB3aXRoX2dlbnJlJHdpa2lfZ2VucmUpLCA3OjE0XQp3aXRoX2dlbnJlJEdlbnJlWzc4NV0gPC0gIkNvdW50cnkiCmBgYApDaGFuZ2UgYWxsICpvY2sgdG8gUm9jayBnZW5yZQpgYGB7cn0Kc29ydCh0YWJsZShncmVwKCJvY2siLCB3aXRoX2dlbnJlJEdlbnJlLCB2YWx1ZSA9IFQpKSwgZGVjcmVhc2luZyA9IFQpCndpdGhfZ2VucmUkR2VucmVbZ3JlcGwoIm9jayIsIHdpdGhfZ2VucmUkR2VucmUpXSA8LSAiUm9jayIKc29ydCh0YWJsZSh3aXRoX2dlbnJlJEdlbnJlKSwgZGVjcmVhc2luZyA9IFQpCmBgYApQb3AKYGBge3J9CnNvcnQodGFibGUoZ3JlcCgiKFB8cClvcCIsIHdpdGhfZ2VucmUkR2VucmUsIHZhbHVlID0gVCkpLCBkZWNyZWFzaW5nID0gVCkKd2l0aF9nZW5yZSRHZW5yZVtncmVwbCgiKFB8cClvcCIsIHdpdGhfZ2VucmUkR2VucmUpXSA8LSAiUm9jayIKCmBgYAoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiR2VucmUgY29tYmluYXRpb24iCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCiMgUmVmZXJlbmNlczoKaHR0cDovL211c2ljbWFwLmluZm8vCmh0dHA6Ly93d3cubXVzaWNnZW5yZXNsaXN0LmNvbS8KaHR0cHM6Ly96dW1pYy5jb20vZ2VucmVzLwoKIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCmBgYHtyfQp3aXRoX2dlbnJlID0gcmVhZC5jc3YoIn4vR29vZ2xlIERyaXZlL0NvbHVtYmlhLzUyNDMgQURTL0FEUyBQcm9qIDUvRmFsbDIwMTYtcHJvajUtZ3JwMi9kYXRhL0JpbGxib2FyZC93aXRoX2dlbnJlLmNzdiIpCnNvcnQodGFibGUod2l0aF9nZW5yZSRzaW5nZXJfZ2VucmUpLCBkZWNyZWFzaW5nID0gVCkKIyBjbGFzc2ljIHJvY2ssIHNvdWwsIGNvdW50cnksIG9sZGllcywgODBzLCBwb3AsIHJvY2ssIDYwcywgamF6eiwgZGlzY28sIHJvY2sgbiByb2xsLCBibHVlcwpgYGAKCmBgYHtyfQpoZWFkKHdpdGhfZ2VucmUpCnNvcnQodGFibGUod2l0aF9nZW5yZSR3aWtpX2dlbnJlKSwgZGVjcmVhc2luZyA9IFQpCmBgYAoKTm90IEZvdW5kCmBgYHtyfQp3aXRoX2dlbnJlW2dyZXBsKCJOb3QgRm91bmQiLCB3aXRoX2dlbnJlJHdpa2lfZ2VucmUpLCA4OjldCndpdGhfZ2VucmVbZ3JlcGwoIk5vdCBGb3VuZCIsIHdpdGhfZ2VucmUkd2lraV9nZW5yZSksIF0KYGBgCgpNYW51YWxseSBzZWFyY2ggZm9yICdOb3QgRm91bmQncyBhY3R1YWwgZ2VucmUKYGBge3J9CndpdGhfZ2VucmVbd2l0aF9nZW5yZSRpZCAlaW4lIGMoMTA2MywgMTA2NywgMTA2OSwgMTA3MCwgMTA3MSwgMTA3OCwgMTA4NCwgMTA4NywgMTA5OSwgMTEwMSwgMTEwNiwgMTExMCwgMTExMywgMTExNiwgMTExOCwgMTExOSwgMTEyMCwgMTEyMywgMTEyNCwgMTEyNywgMTEzMiwgMTEzNCwgMTEzNSwgMTE0NSwgMTE0NiwgMTE0NywgMTE0OSwgMTE1MiwgMTE1MywgMTE1NCwgMTE1NSwgMTE2MCwgMTE2NiwgMTE3NCwgMTE3NywgMTE4OCwgMTE5MiwgMTE5NywgMTIwMCwgMTIwMywgMTIwOCwgMTIyMSwgMTIyNSwgMTIyNywgMTIzNSwgMTIzNywgMTI0NiwgMTI0NywgMTI0OCwgMTI1MCwgMTI1MywgMTI2MywgMTI2NywgMTI2OSwgMTI3OSwgMTI4MCwgMTI4MywgMTI4NywgMTI5NyksIGMoODo5LCAxMjoxMyldCmdlbnJlXzUgPSBjKCJSb2NrIiwgIlBvcCIsICJQb3AiLCAiSGFyZCByb2NrIiwgIlJvY2siLCAiU291bCIsICJQb3AiLCAiRm9sayIsICJKYXp6IiwgIlJvY2siLCAiSGlwIGhvcCIsICJSb2NrIiwgIkNvdW50cnkiLCAiUm9jayIsICJNdXNpY2FsL1JtYW50aWMiLCAiUm9jayIsICJDb3VudHJ5IiwgIkNvdW50cnkgcG9wIiwgIlJvY2siLCAiUG9wIiwgIkphenoiLCAiU291bCIsICJDb3VudHJ5IiwgIlImQiIsICJGb2xrIHJvY2siLCAiUG9wIiwgIkphenoiLCAiUm9jayBuIHJvbGwiLCAiRm9sayIsICJDb3VudHJ5IiwgIlJvY2siLCAiQ291bnRyeSIsICJSJkIiLCAiUm9jayIsICJSJkIiLCAiUG9wIiwgIlImQiIsICJSb2NrIiwgIlJvY2siLCAiQWx0ZXJuYXRpdmUvSW5kaWUiLCAiUm9jayIsICJSJkIiLCAiQ291bnRyeSIsICJSb2NrIiwgIkZ1bmsiLCAiUG9wIiwgIlJvY2siLCAiUiZCIiwgIlBvcCIsICJSJkIiLCAiUG9wIiwgIkJsdWVzIiwgIkhhcmQgcm9jayIsICJSb2NrIiwgIkRhbmNlIHBvcCIsICJSJkIiLCAiUiZCIiwgIkNvdW50cnkiLCAiUm9jayIpCmxlbmd0aChnZW5yZV81KSAjIDU5CnNhdmUoZ2VucmVfNSwgZmlsZSA9ICJ+L0dvb2dsZSBEcml2ZS9Db2x1bWJpYS81MjQzIEFEUy9BRFMgUHJvaiA1L0ZhbGwyMDE2LXByb2o1LWdycDIvZGF0YS9CaWxsYm9hcmQvZ2VucmVfNS5SRGF0YSIpCmBgYApjKCJSb2NrIiwgIlBvcCIsICJQb3AiLCAiSGFyZCByb2NrIiwgIlJvY2siLCAiU291bCIsICJQb3AiLCAiRm9sayIsICJKYXp6IiwgIlJvY2siLCAiSGlwIGhvcCIsICJSb2NrIiwgIkNvdW50cnkiLCAiUm9jayIsICJNdXNpY2FsL1JtYW50aWMiLCAiUm9jayIsICJDb3VudHJ5IiwgQ291bnRyeSBwb3AiLCAiUm9jayIsICJQb3AiLCAiSmF6eiIsICJTb3VsIiwgIkNvdW50cnkiLCAiUiZCIiwgIkZvbGsgcm9jayIsICJQb3AiLCAiSmF6eiIsICJSb2NrIG4gcm9sbCIsICJGb2xrIiwgIkNvdW50cnkiLCAiUm9jayIsICJDb3VudHJ5IiwgIlImQiIsICJSb2NrIiwgIlImQiIsICJQb3AiLCAiUiZCIiwgIlJvY2siLCAiUm9jayIsICJBbHRlcm5hdGl2ZS9JbmRpZSIsICJSb2NrIiwgIlImQiIsICJDb3VudHJ5IiwgIlJvY2siLCAiRnVuayIsICJQb3AiLCAiUm9jayIsICJSJkIiLCAiUG9wIiwgIlImQiIsICJQb3AiLCAiQmx1ZXMiLCAiSGFyZCByb2NrIiwgIlJvY2siLCAiRGFuY2UgcG9wIiwgIlImQiIsICJSJkIiLCAiQ291bnRyeSIsICJSb2NrIikKCgoKUmVwbGFjZSBhbGwgIk5vdCBGb3VuZCIgdGVybXMKYGBge3J9CmxvYWQoIi9Vc2Vycy9tdXNocm9vbXZ2L0dvb2dsZSBEcml2ZS9Db2x1bWJpYS81MjQzIEFEUy9BRFMgUHJvaiA1L0ZhbGwyMDE2LXByb2o1LWdycDIvZGF0YS9CaWxsYm9hcmQvZ2VucmVfMS5SRGF0YSIpCmdlbnJlXzIgPSBNYXgKZ2VucmVfMyA9IGdlbnJlX3kkd2lraV9nZW5yZQpoZWFkKGdlbnJlX3kkd2lraV9nZW5yZSkKZ2VucmVfNCA9IENlbgoKTkYgPSBjKGdlbnJlXzEsIGdlbnJlXzIsIGdlbnJlXzMsIGdlbnJlXzQsIGdlbnJlXzUpCk5GWzJdCmFzLnZlY3RvcihORikKbGVuZ3RoKE5GKQoKIyBkdXBsaWNhdGUgJ3dpdGhfZ2VucmUnIHRhYmxlCmZpbmFsX2dlbnJlID0gcmVhZC5jc3YoIn4vR29vZ2xlIERyaXZlL0NvbHVtYmlhLzUyNDMgQURTL0FEUyBQcm9qIDUvRmFsbDIwMTYtcHJvajUtZ3JwMi9kYXRhL0JpbGxib2FyZC93aXRoX2dlbnJlLmNzdiIsIHN0cmluZ3NBc0ZhY3RvcnM9RkFMU0UpCiMgZmluYWxfZ2VucmUkaWRbd2hpY2god2l0aF9nZW5yZSR3aWtpX2dlbnJlID09ICJOb3QgRm91bmQiKV1bMl0gIyBpZCA9IDI2CiMgZmluYWxfZ2VucmUkd2lraV9nZW5yZVt3aGljaCh3aXRoX2dlbnJlJHdpa2lfZ2VucmUgPT0gIk5vdCBGb3VuZCIpXVsyXSA8LSBORlsyXQojIGZpbmFsX2dlbnJlW2ZpbmFsX2dlbnJlJGlkID09IDM5LCAxM10gIyBjb3JyZWN0Cgpmb3IgKGkgaW4gMToyODcpIHsKICBmaW5hbF9nZW5yZSR3aWtpX2dlbnJlW3doaWNoKHdpdGhfZ2VucmUkd2lraV9nZW5yZSA9PSAiTm90IEZvdW5kIildW2ldIDwtIE5GW2ldCn0Kc29ydCh0YWJsZShmaW5hbF9nZW5yZSR3aWtpX2dlbnJlKSwgZGVjcmVhc2luZyA9IFQpIApzdW0odGFibGUod2l0aF9nZW5yZSR3aWtpX2dlbnJlKSkgIyA4OTAKR2VucmUgPSBmaW5hbF9nZW5yZVsgLCAtYygxOjMsMTIpXQpuYW1lcyhHZW5yZSlbOV0gPC0gImdlbnJlIgpoZWFkKEdlbnJlKQoKR2VucmVbd2hpY2goR2VucmUkZ2VucmUgPT0gIlsxXSIpLF0gIyBib3RoIFJvY2sKR2VucmVbd2hpY2goR2VucmUkZ2VucmUgPT0gIkJyaWxsIEJ1aWxkaW5nIiksXSAjIGRvby13b3AKR2VucmVbd2hpY2goR2VucmUkZ2VucmUgPT0gIkNhciBzb25nIiksXSAjIHN1cmYgcm9jawpHZW5yZVt3aGljaChHZW5yZSRnZW5yZSA9PSAiTGFiZWwiKSxdICMgUm9jaywgUm9jaywgSmF6eiwgRnVuawpHZW5yZSRnZW5yZVt3aGljaChHZW5yZSRpZCAlaW4lIGMoMjUsIDI3KSldID0gIlJvY2siCkdlbnJlJGdlbnJlW3doaWNoKEdlbnJlJGlkID09IDc0NildID0gIkphenoiCkdlbnJlJGdlbnJlW3doaWNoKEdlbnJlJGlkID09IDEyMDEpXSA9ICJGdW5rIgpHZW5yZVt3aGljaChHZW5yZSRnZW5yZSA9PSAiQWR1bHQgY29udGVtcG9yYXJ5IiksXSAKR2VucmVbd2hpY2goR2VucmUkZ2VucmUgJWluJSBjKCJIaS1OUkciLCAiSmFtYmFuZCIsICJMYW1iYWRhIiwgIk1lcnNleWJlYXQiLCAiTmV3IGphY2sgc3dpbmciLCAiUG93ZXIgYmFsbGFkIiwgIlJlZ2dhZSIpKSxdIAojIE1lcnNleWJlYXQsIFBvd2VyIGJhbGxhZCwgamFtYmFuZCA9IFJvY2sKIyBSZWdnYWUsIE5ldyBqYWNrIHN3aW5nLCBIaS1OUkcgPSBSJkIKIyBMYW1iYWRhID0gUG9wCmBgYAoKQ291bnRyeSBpbmNsdWRlcyBjb3VudHJ5IGFuZCBibHVlZ3Jhc3MKYGBge3J9CkdlbnJlW2dyZXBsKCJvdW50cnkiLCBHZW5yZSRnZW5yZSksIDldCkdlbnJlJGdlbnJlW2dyZXBsKCJvdW50cnkiLCBHZW5yZSRnZW5yZSldIDwtICJDb3VudHJ5IgpHZW5yZSRnZW5yZVtncmVwbCgiQmx1ZWdyYXNzIiwgR2VucmUkZ2VucmUpXSA8LSAiQ291bnRyeSIKYGBgCgpSb2NrIGluY2x1ZGVzIGFsbCAqb2NrLCBtZXRhbCwgcHVuaywgbmV3IHdhdmUKYGBge3J9CnNvcnQodGFibGUoZ3JlcCgidW5rIiwgR2VucmUkZ2VucmUsIHZhbHVlID0gVCkpLCBkZWNyZWFzaW5nID0gVCkKR2VucmUkZ2VucmVbZ3JlcGwoIihQfHApdW5rIiwgR2VucmUkZ2VucmUpXSA8LSAgIlJvY2siCkdlbnJlJGdlbnJlW2dyZXBsKCJvY2siLCBHZW5yZSRnZW5yZSldIDwtICAiUm9jayIKR2VucmUkZ2VucmVbZ3JlcGwoIm1ldGFsIiwgR2VucmUkZ2VucmUpXSA8LSAgIlJvY2siCkdlbnJlJGdlbnJlW0dlbnJlJGdlbnJlICVpbiUgYygiWzFdIiwgIk5ldyB3YXZlIiwgIkNhciBzb25nIiwgIkFkdWx0IGNvbnRlbXBvcmFyeSIsICJNZXJzZXliZWF0IiwgIlBvd2VyIGJhbGxhZCIsICJKYW1iYW5kIildIDwtICJSb2NrIgpzb3J0KHRhYmxlKEdlbnJlJGdlbnJlKSwgZGVjcmVhc2luZyA9IFQpCmBgYApQb3AKYGBge3J9CnNvcnQodGFibGUoZ3JlcCgiKFB8cClvcCIsIEdlbnJlJGdlbnJlLCB2YWx1ZSA9IFQpKSwgZGVjcmVhc2luZyA9IFQpCkdlbnJlJGdlbnJlW2dyZXBsKCIoUHxwKW9wIiwgR2VucmUkZ2VucmUpXSA8LSAiUG9wIgpHZW5yZSRnZW5yZVt3aGljaChHZW5yZSRnZW5yZSA9PSAiTGFtYmFkYSIpXSA8LSAiUG9wIgpzb3J0KHRhYmxlKEdlbnJlJGdlbnJlKSwgZGVjcmVhc2luZyA9IFQpCmBgYAoKU291bApgYGB7cn0Kc29ydCh0YWJsZShncmVwKCJvdWwiLCBHZW5yZSRnZW5yZSwgdmFsdWUgPSBUKSksIGRlY3JlYXNpbmcgPSBUKQpHZW5yZSRnZW5yZVtncmVwbCgib3VsIiwgR2VucmUkZ2VucmUpXSA8LSAiU291bCIKc29ydCh0YWJsZShHZW5yZSRnZW5yZSksIGRlY3JlYXNpbmcgPSBUKQpgYGAKSGlwLWhvcApgYGB7cn0Kc29ydCh0YWJsZShncmVwKCIoSHxoKW9wIiwgR2VucmUkZ2VucmUsIHZhbHVlID0gVCkpLCBkZWNyZWFzaW5nID0gVCkKR2VucmUkZ2VucmVbZ3JlcGwoIihIfGgpb3AiLCBHZW5yZSRnZW5yZSldIDwtICJIaXAtaG9wIgpzb3J0KHRhYmxlKEdlbnJlJGdlbnJlKSwgZGVjcmVhc2luZyA9IFQpCmBgYApGb2xrCmBgYHtyfQpzb3J0KHRhYmxlKGdyZXAoIm9sayIsIEdlbnJlJGdlbnJlLCB2YWx1ZSA9IFQpKSwgZGVjcmVhc2luZyA9IFQpCkdlbnJlJGdlbnJlW2dyZXBsKCJvbGsiLCBHZW5yZSRnZW5yZSldIDwtICJGb2xrIgpgYGAKClImQi9Tb3VsIGluY2x1ZGVzIFImQiwgU291bCwgRnVuaywgVXJiYW4sICAKYGBge3J9CnNvcnQodGFibGUoZ3JlcCgidW5rIiwgR2VucmUkZ2VucmUsIHZhbHVlID0gVCkpLCBkZWNyZWFzaW5nID0gVCkKR2VucmUkZ2VucmVbZ3JlcGwoIihGfGYpdW5rIiwgR2VucmUkZ2VucmUpXSA8LSAiUiZCIgpHZW5yZSRnZW5yZVtncmVwbCgiUiZCIiwgR2VucmUkZ2VucmUpXSA8LSAiUiZCIgpzb3J0KHRhYmxlKGdyZXAoImlzY28iLCBHZW5yZSRnZW5yZSwgdmFsdWUgPSBUKSksIGRlY3JlYXNpbmcgPSBUKQpHZW5yZSRnZW5yZVtncmVwbCgiaXNjbyIsIEdlbnJlJGdlbnJlKV0gPC0gIlImQiIKCkdlbnJlJGdlbnJlW0dlbnJlJGdlbnJlICVpbiUgYygiUiZCIiwgIlJoeXRobSBhbmQgYmx1ZXMiLCAiU291bCIsICJEb28td29wIiwgIkJyaWxsIEJ1aWxkaW5nIiwgIlJlZ2dhZSIsICJOZXcgamFjayBzd2luZyIsICJIaS1OUkciLCAiRGFuY2UiLCAiU2thIiwgIkhvdXNlIildIDwtICJSJkIvU291bCIKc29ydCh0YWJsZShHZW5yZSRnZW5yZSksIGRlY3JlYXNpbmcgPSBUKQpgYGAKCkphenoKYGBge3J9CnNvcnQodGFibGUoZ3JlcCgiYXp6IiwgR2VucmUkZ2VucmUsIHZhbHVlID0gVCkpLCBkZWNyZWFzaW5nID0gVCkKR2VucmUkZ2VucmVbZ3JlcGwoImF6eiIsIEdlbnJlJGdlbnJlKV0gPC0gIkphenoiCmBgYAoKT3RoZXJzIGluY2x1ZGVzIFdvcmxkLCBWb2NhbCwgTGF0aW4sIENocmlzdG1hcywgSG9saWRheSwgCmBgYHtyfQpHZW5yZSRnZW5yZVtHZW5yZSRnZW5yZSAlaW4lIGMoIldvcmxkIiwgIlZvY2FsIiwgIkxhdGluIiwgIkNocmlzdG1hcyIsICJIb2xpZGF5IildIDwtICJPdGhlcnMiCkdlbnJlJGdlbnJlW2dyZXBsKCJsdGVybmF0aXZlIiwgR2VucmUkZ2VucmUpXSA8LSAiT3RoZXJzIiAKR2VucmUkZ2VucmVbZ3JlcGwoInVzaWNhbCIsIEdlbnJlJGdlbnJlKV0gPC0gIk90aGVycyIKc29ydCh0YWJsZShHZW5yZSRnZW5yZSksIGRlY3JlYXNpbmcgPSBUKQpgYGAKClNhdmUgdG8gZmluYWxfZ2VucmUuY3N2CmBgYHtyfQp3cml0ZS5jc3YoR2VucmUsIGZpbGUgPSAifi9Hb29nbGUgRHJpdmUvQ29sdW1iaWEvNTI0MyBBRFMvQURTIFByb2ogNS9GYWxsMjAxNi1wcm9qNS1ncnAyL2RhdGEvQmlsbGJvYXJkL2ZpbmFsX2dlbnJlLmNzdiIpCmBgYAoK</div>
 
 
 

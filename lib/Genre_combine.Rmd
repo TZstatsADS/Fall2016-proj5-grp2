@@ -3,7 +3,11 @@ title: "Genre combination"
 output: html_notebook
 ---
 ###########################################################################
-# Notice that wiki_genre is not complete. We need it to be complete first.
+# References:
+http://musicmap.info/
+http://www.musicgenreslist.com/
+https://zumic.com/genres/
+
 ###########################################################################
 ```{r}
 with_genre = read.csv("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/with_genre.csv")
@@ -22,33 +26,129 @@ with_genre[grepl("Not Found", with_genre$wiki_genre), 8:9]
 with_genre[grepl("Not Found", with_genre$wiki_genre), ]
 ```
 
-Search for 'Not Found'
+Manually search for 'Not Found's actual genre
 ```{r}
 with_genre[with_genre$id %in% c(1063, 1067, 1069, 1070, 1071, 1078, 1084, 1087, 1099, 1101, 1106, 1110, 1113, 1116, 1118, 1119, 1120, 1123, 1124, 1127, 1132, 1134, 1135, 1145, 1146, 1147, 1149, 1152, 1153, 1154, 1155, 1160, 1166, 1174, 1177, 1188, 1192, 1197, 1200, 1203, 1208, 1221, 1225, 1227, 1235, 1237, 1246, 1247, 1248, 1250, 1253, 1263, 1267, 1269, 1279, 1280, 1283, 1287, 1297), c(8:9, 12:13)]
 genre_5 = c("Rock", "Pop", "Pop", "Hard rock", "Rock", "Soul", "Pop", "Folk", "Jazz", "Rock", "Hip hop", "Rock", "Country", "Rock", "Musical/Rmantic", "Rock", "Country", "Country pop", "Rock", "Pop", "Jazz", "Soul", "Country", "R&B", "Folk rock", "Pop", "Jazz", "Rock n roll", "Folk", "Country", "Rock", "Country", "R&B", "Rock", "R&B", "Pop", "R&B", "Rock", "Rock", "Alternative/Indie", "Rock", "R&B", "Country", "Rock", "Funk", "Pop", "Rock", "R&B", "Pop", "R&B", "Pop", "Blues", "Hard rock", "Rock", "Dance pop", "R&B", "R&B", "Country", "Rock")
 length(genre_5) # 59
+save(genre_5, file = "~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/genre_5.RData")
 ```
 c("Rock", "Pop", "Pop", "Hard rock", "Rock", "Soul", "Pop", "Folk", "Jazz", "Rock", "Hip hop", "Rock", "Country", "Rock", "Musical/Rmantic", "Rock", "Country", Country pop", "Rock", "Pop", "Jazz", "Soul", "Country", "R&B", "Folk rock", "Pop", "Jazz", "Rock n roll", "Folk", "Country", "Rock", "Country", "R&B", "Rock", "R&B", "Pop", "R&B", "Rock", "Rock", "Alternative/Indie", "Rock", "R&B", "Country", "Rock", "Funk", "Pop", "Rock", "R&B", "Pop", "R&B", "Pop", "Blues", "Hard rock", "Rock", "Dance pop", "R&B", "R&B", "Country", "Rock")
 
 
 
+Replace all "Not Found" terms
+```{r}
+load("/Users/mushroomvv/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/genre_1.RData")
+genre_2 = Max
+genre_3 = genre_y$wiki_genre
+head(genre_y$wiki_genre)
+genre_4 = Cen
 
-Country
-```{r}
-with_genre[grepl("ountry rock", with_genre$wiki_genre), 7:14]
-with_genre$Genre[785] <- "Country"
+NF = c(genre_1, genre_2, genre_3, genre_4, genre_5)
+NF[2]
+as.vector(NF)
+length(NF)
+
+# duplicate 'with_genre' table
+final_genre = read.csv("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/with_genre.csv", stringsAsFactors=FALSE)
+# final_genre$id[which(with_genre$wiki_genre == "Not Found")][2] # id = 26
+# final_genre$wiki_genre[which(with_genre$wiki_genre == "Not Found")][2] <- NF[2]
+# final_genre[final_genre$id == 39, 13] # correct
+
+for (i in 1:287) {
+  final_genre$wiki_genre[which(with_genre$wiki_genre == "Not Found")][i] <- NF[i]
+}
+sort(table(final_genre$wiki_genre), decreasing = T) 
+sum(table(with_genre$wiki_genre)) # 890
+Genre = final_genre[ , -c(1:3,12)]
+names(Genre)[9] <- "genre"
+head(Genre)
+
+Genre[which(Genre$genre == "[1]"),] # both Rock
+Genre[which(Genre$genre == "Brill Building"),] # doo-wop
+Genre[which(Genre$genre == "Car song"),] # surf rock
+Genre[which(Genre$genre == "Label"),] # Rock, Rock, Jazz, Funk
+Genre$genre[which(Genre$id %in% c(25, 27))] = "Rock"
+Genre$genre[which(Genre$id == 746)] = "Jazz"
+Genre$genre[which(Genre$id == 1201)] = "Funk"
+Genre[which(Genre$genre == "Adult contemporary"),] 
+Genre[which(Genre$genre %in% c("Hi-NRG", "Jamband", "Lambada", "Merseybeat", "New jack swing", "Power ballad", "Reggae")),] 
+# Merseybeat, Power ballad, jamband = Rock
+# Reggae, New jack swing, Hi-NRG = R&B
+# Lambada = Pop
 ```
-Change all *ock to Rock genre
+
+Country includes country and bluegrass
 ```{r}
-sort(table(grep("ock", with_genre$Genre, value = T)), decreasing = T)
-with_genre$Genre[grepl("ock", with_genre$Genre)] <- "Rock"
-sort(table(with_genre$Genre), decreasing = T)
+Genre[grepl("ountry", Genre$genre), 9]
+Genre$genre[grepl("ountry", Genre$genre)] <- "Country"
+Genre$genre[grepl("Bluegrass", Genre$genre)] <- "Country"
+```
+
+Rock includes all *ock, metal, punk, new wave
+```{r}
+sort(table(grep("unk", Genre$genre, value = T)), decreasing = T)
+Genre$genre[grepl("(P|p)unk", Genre$genre)] <-  "Rock"
+Genre$genre[grepl("ock", Genre$genre)] <-  "Rock"
+Genre$genre[grepl("metal", Genre$genre)] <-  "Rock"
+Genre$genre[Genre$genre %in% c("[1]", "New wave", "Car song", "Adult contemporary", "Merseybeat", "Power ballad", "Jamband")] <- "Rock"
+sort(table(Genre$genre), decreasing = T)
 ```
 Pop
 ```{r}
-sort(table(grep("(P|p)op", with_genre$Genre, value = T)), decreasing = T)
-with_genre$Genre[grepl("(P|p)op", with_genre$Genre)] <- "Rock"
-
+sort(table(grep("(P|p)op", Genre$genre, value = T)), decreasing = T)
+Genre$genre[grepl("(P|p)op", Genre$genre)] <- "Pop"
+Genre$genre[which(Genre$genre == "Lambada")] <- "Pop"
+sort(table(Genre$genre), decreasing = T)
 ```
 
+Soul
+```{r}
+sort(table(grep("oul", Genre$genre, value = T)), decreasing = T)
+Genre$genre[grepl("oul", Genre$genre)] <- "Soul"
+sort(table(Genre$genre), decreasing = T)
+```
+Hip-hop
+```{r}
+sort(table(grep("(H|h)op", Genre$genre, value = T)), decreasing = T)
+Genre$genre[grepl("(H|h)op", Genre$genre)] <- "Hip-hop"
+sort(table(Genre$genre), decreasing = T)
+```
+Folk
+```{r}
+sort(table(grep("olk", Genre$genre, value = T)), decreasing = T)
+Genre$genre[grepl("olk", Genre$genre)] <- "Folk"
+```
+
+R&B/Soul includes R&B, Soul, Funk, Urban,  
+```{r}
+sort(table(grep("unk", Genre$genre, value = T)), decreasing = T)
+Genre$genre[grepl("(F|f)unk", Genre$genre)] <- "R&B"
+Genre$genre[grepl("R&B", Genre$genre)] <- "R&B"
+sort(table(grep("isco", Genre$genre, value = T)), decreasing = T)
+Genre$genre[grepl("isco", Genre$genre)] <- "R&B"
+
+Genre$genre[Genre$genre %in% c("R&B", "Rhythm and blues", "Soul", "Doo-wop", "Brill Building", "Reggae", "New jack swing", "Hi-NRG", "Dance", "Ska", "House")] <- "R&B/Soul"
+sort(table(Genre$genre), decreasing = T)
+```
+
+Jazz
+```{r}
+sort(table(grep("azz", Genre$genre, value = T)), decreasing = T)
+Genre$genre[grepl("azz", Genre$genre)] <- "Jazz"
+```
+
+Others includes World, Vocal, Latin, Christmas, Holiday, 
+```{r}
+Genre$genre[Genre$genre %in% c("World", "Vocal", "Latin", "Christmas", "Holiday")] <- "Others"
+Genre$genre[grepl("lternative", Genre$genre)] <- "Others" 
+Genre$genre[grepl("usical", Genre$genre)] <- "Others"
+sort(table(Genre$genre), decreasing = T)
+```
+
+Save to final_genre.csv
+```{r}
+write.csv(Genre, file = "~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/final_genre.csv")
+```
 
