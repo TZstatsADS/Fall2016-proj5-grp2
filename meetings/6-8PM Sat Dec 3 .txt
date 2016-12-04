@@ -1,0 +1,13 @@
+Manually classify "Not Found" genre:
+
+    - Kanghui 2:178
+    - Max 179:355
+    - Yixin 356:532
+    - Cen 533:709
+    - Wanyi 710:888
+    
+    
+    
+
+
+Find algo to plot for next layers not all layers 
