@@ -6,7 +6,7 @@ library(highcharter)
 
 tagList(
   useShinyjs(),
-navbarPage('Songs!', theme = shinytheme('united'),
+navbarPage('MelodySoup', theme = shinytheme('cosmo'),
            
   tabPanel("Make your own song!",
            sidebarLayout(

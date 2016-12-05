@@ -1,7 +1,7 @@
 library(dplyr)
 library(highcharter)
 
-load('/Users/Max/GitHub/Fall2016-proj5-grp2/lib/Proj5/GM4.prob.RData')
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/GM4.prob.RData")
 
 #get start off chord for the song
 start_chord = function(genre){
