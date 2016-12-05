@@ -34,7 +34,7 @@ load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billb
 library(e1071)
 
 # 5-fold cross validation
-set.seed(9999)
+set.seed(1001)
 test.n = vector()
 index = sample(1:990, 990, replace = F)
 matrix = as.data.frame(cbind(as.matrix(song_Matrix2), genre))
@@ -59,10 +59,13 @@ load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billb
 library(e1071)
 
 # 5-fold cross validation
+
 set.seed(1001)
-test.n = vector()
 index = sample(1:990, 990, replace = F)
 matrix = as.data.frame(cbind(as.matrix(song_Matrix), genre))
+test.n = vector()
+chord.vec = vector()
+temp = 0
 for (i in 1:5){
   test.n = index[(198*i - 197): (198*i)] # 1:1+197, 199:199+197, 199+198:199+198+197...
   train.data = matrix[-test.n, ]
@@ -71,9 +74,37 @@ for (i in 1:5){
   pred = predict(NB, test.data[ , -ncol(matrix)])
   # print(table(pred, test.data[, 4799]))
   # print(sum(pred == test.data[ , 4799])/nrow(test.data))
-  print(confusionMatrix(pred, reference = test.data[, ncol(matrix)]))
+  # print(confusionMatrix(pred, reference = test.data[, ncol(matrix)]))
+  temp = sum(pred == genre[test.n])/198
+  chord.vec = c(chord.vec, temp)
   print(i)
 }
+chord.vec; mean(chord.vec)
 ```
 
-With the same 5-fold cv, naive bayes using chord is better than that using bigrams. 
+With the same 5-fold cv, naive bayes using chord is better than that using bigrams. Prediction accuracy rate is around 52%.
+
+
+Baseline model
+```{r}
+prob = table(genre)/sum(table(genre))
+# names(table(genre))
+base.vec = vector()
+temp = 0
+set.seed(1001)
+for (i in 1:5) {
+  test.n = index[(198*i - 197): (198*i)] # 1:1+197, 199:199+197, 199+198:199+198+197...
+  test.data = matrix[test.n, ]
+  baseline = sample(names(table(genre)), 198, prob = prob, replace = T)
+  temp = sum(baseline == genre[test.n])/198
+  base.vec = c(base.vec, temp)
+} 
+base.vec; mean(base.vec)
+```
+Prediction accuracy rate of baseline model is around 25%.
+
+```{r}
+mean(chord.vec)/mean(base.vec)-1
+```
+
+Using naive bayes on chords, we enhanced the prediction accracy rate by 107%. 
