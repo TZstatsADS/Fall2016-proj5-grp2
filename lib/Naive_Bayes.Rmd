@@ -1,0 +1,79 @@
+---
+title: "Naive Bayes"
+output: html_notebook
+---
+http://rstudio-pubs-static.s3.amazonaws.com/39014_76f8487a8fb84ed7849e96846847c295.html
+http://stackoverflow.com/questions/19615181/finding-ngrams-in-r-and-comparing-ngrams-across-corpora
+http://stackoverflow.com/questions/8161167/what-algorithm-i-need-to-find-n-grams
+
+```{r}
+load("/Users/mushroomvv/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/Cen-s-billboard-data-processing/cleaned_data.RData")
+data = all.chord.original.sd
+head(data)
+
+# genre for each song in the all.chord.original.sd list
+final_genre = read.csv(file = "~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/final_genre.csv")
+
+genre = vector()
+for (i in 1:length(data)){
+  genre[i] = as.character(final_genre$genre[final_genre$id == as.numeric(data[[i]][1])])
+}
+head(genre)
+length(genre)
+
+data = sapply(data, function(x) x[-1])
+head(data)
+length(unique(unlist(data))) # 722 types of chords
+```
+
+Bigram naive bayes
+```{r}
+# load bigram document term matrix
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/SongTDM.RData")
+
+library(e1071)
+
+# 5-fold cross validation
+set.seed(9999)
+test.n = vector()
+index = sample(1:990, 990, replace = F)
+matrix = as.data.frame(cbind(as.matrix(song_Matrix2), genre))
+for (i in 1:5){
+  test.n = index[(198*i - 197): (198*i)] # 1:1+197, 199:199+197, 199+198:199+198+197...
+  train.data = matrix[-test.n, ]
+  test.data = matrix[test.n, ]
+  NB = naiveBayes(genre~., data = train.data)
+  pred = predict(NB, test.data[ , -ncol(matrix)])
+  # print(table(pred, test.data[, 4799]))
+  # print(sum(pred == test.data[ , 4799])/nrow(test.data))
+  print(confusionMatrix(pred, reference = test.data[, ncol(matrix)]))
+  print(i)
+}
+```
+
+
+chord naive bayes
+```{r}
+# load bigram document term matrix
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/SongTDM.RData")
+library(e1071)
+
+# 5-fold cross validation
+set.seed(1001)
+test.n = vector()
+index = sample(1:990, 990, replace = F)
+matrix = as.data.frame(cbind(as.matrix(song_Matrix), genre))
+for (i in 1:5){
+  test.n = index[(198*i - 197): (198*i)] # 1:1+197, 199:199+197, 199+198:199+198+197...
+  train.data = matrix[-test.n, ]
+  test.data = matrix[test.n, ]
+  NB = naiveBayes(genre~., data = train.data)
+  pred = predict(NB, test.data[ , -ncol(matrix)])
+  # print(table(pred, test.data[, 4799]))
+  # print(sum(pred == test.data[ , 4799])/nrow(test.data))
+  print(confusionMatrix(pred, reference = test.data[, ncol(matrix)]))
+  print(i)
+}
+```
+
+With the same 5-fold cv, naive bayes using chord is better than that using bigrams. 
