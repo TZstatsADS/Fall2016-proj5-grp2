@@ -1,6 +1,6 @@
-setwd("~/Desktop/Billboard")
-load("All4Grams.Rdata")
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/All4Grams.Rdata")
 amount <- 80
+para <- 250
 haha <- all_chord_ngram[1:amount,c(1,2)]
 
 data <- matrix(0,nrow = amount, ncol = 5)
@@ -40,7 +40,7 @@ for(i in 1:max(d4[,2]))
 }
 nodes <- as.data.frame(nodes)
 names(nodes) <- "name"
-nodes <- c(paste(nodes$name),"genre")
+nodes <- c(paste(nodes$name),"Start")
 nodes <- as.data.frame(nodes)
 names(nodes) <- "name"
 
@@ -53,7 +53,7 @@ start[,1] <- nrow(nodes)
 start[,2] <- d3[,2]
 st <- cbind(rep(nrow(nodes),length(table(start[,2]))), 
             1:length(table(start[,2])), 
-            table(start[,2])*200)
+            table(start[,2])*para)
 d5 <- rbind(st,d5)
 row.names(d5) <- 1:nrow(d5)
 
@@ -73,9 +73,10 @@ d6$links$type <- sub('\\:.*', '',d6$nodes[d6$links$source + 1, 'name'])
 d6$nodes$hehe <- sub('\\:.*', '',d6$nodes[, 'name'])
 
 
-p <- sankeyNetwork(Links = d6$links, Nodes = d6$nodes, Source = "source",
+Sankey = sankeyNetwork(Links = d6$links, Nodes = d6$nodes, Source = "source",
               Target = "target", Value = "value", NodeID = "name",
               units = "TWh", fontSize = 12, nodeWidth = 30, LinkGroup = 'type',
-              NodeGroup = 'hehe', colourScale = "d3.scale.ordinal().range(['#FF9999','#FFCC99', '#CCCC00', '#CCFF99', '#99CCFF', '#9999FF', '#CC99FF' ])")
-p
+              NodeGroup = 'hehe', colourScale = "d3.scale.ordinal().range(['#FF4040', '#FF7F00', '#FFD700', '#82E0AA', '#99CCFF', '#9999FF', '#FF00FF','#008B8B' ])")
+Sankey
+save(Sankey, file = "~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/Sankey.Rdata")
 
