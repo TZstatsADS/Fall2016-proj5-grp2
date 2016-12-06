@@ -54,5 +54,12 @@ p2
 
 ## Going to sleep
 
-- Get in bed
-- Count sheep
+All genres:
+C:maj => F:maj => C:maj => F:maj => G:maj => Bb:maj => F:maj/3 => Ab:maj => Eb:maj/3
+
+R&B:
+c:maj => c:sus4(b7 => c:maj => c:sus4(b7 => f:maj => f:sus4(b7 => f:maj => g:maj
+
+Jazz:
+c:maj(9) => c:maj/5 => g:maj => c:maj(9) => c:maj/5 => g:maj => c:7 => f:7
+g:7/5 => c:maj => d:7 => g:7 => c:7 => f:maj => c:maj
