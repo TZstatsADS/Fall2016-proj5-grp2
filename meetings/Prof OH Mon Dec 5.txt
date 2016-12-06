@@ -1,0 +1,26 @@
+histogram of major chords main number of 
+
+
+in more than half songs
+
+
+example to everybody
+调 transpose
+
+这两个genre不一样大家没想过，给大家展示出来
+tf-idf
+
+
+
+Commerciallize:
+ensemble models
+model to leanr real musicians
+training set of bad examples
+retune, iterative 
+simulate random comb of n-tram and mix them together deep learning
+
+
+Predict:
+assumption proxy
+cluster to be a dictionary
+difference to be alignment
