@@ -15,7 +15,7 @@ function(input, output, session) {
   
   #when user change the genre, update starting pitch and audio player
   observeEvent(input$Genre,{
-    updateActionButton(session, 'start', 'Start a new song!')
+    updateActionButton(session, 'start', 'Start!')
     
     output$html = renderText({'<h1>Music Player</h1><audio controls><source src="/Users/Max/Desktop/record.mp3" type="audio/mpeg"></source></audio>'})
     total_input <<- character()
@@ -34,7 +34,7 @@ function(input, output, session) {
   
   
   observeEvent(input$start,{
-    updateActionButton(session, 'start', 'Choose next chord.')
+    updateActionButton(session, 'start', 'Choose next chord')
     
       
     #update all previous input and output
@@ -64,7 +64,7 @@ function(input, output, session) {
     #form a dataframe for ploting
     netData = data.frame(total_input, total_output)
     
-    updateSelectInput(session, "nextPitch",label = 'Pick your next pitch',
+    updateSelectInput(session, "nextPitch",label = 'Pick your next chord',
                       choices = as.list(end))
     
     
