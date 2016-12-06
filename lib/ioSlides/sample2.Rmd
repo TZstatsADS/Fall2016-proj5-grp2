@@ -1,0 +1,52 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+load("Diagrams.Rdata")
+load("DiagramsData.Rdata")
+
+library(chorddiag)
+chorddiag(Genre.Top2G.Matrix2,groupnameFontsize=8,groupnamePadding = 20,showTicks = FALSE,chordedgeColor =NULL,palette = "Set3",groupColors =Genre.Top2G.Color2)
+```
+
+### Chart D
+
+```{r}
+load("Diagrams.Rdata")
+load("DiagramsData.Rdata")
+
+library(chorddiag)
+chorddiag(Genre.Top2G.Matrix2,groupnameFontsize=8,groupnamePadding = 20,showTicks = FALSE,chordedgeColor =NULL,palette = "Set3",groupColors =Genre.Top2G.Color2)
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+chorddiag(Genre.Top2G.Matrix2,groupnameFontsize=8,groupnamePadding = 20,showTicks = FALSE,chordedgeColor =NULL,palette = "Set3",groupColors =Genre.Top2G.Color2)
+
+```
+
+### Chart C
+
+```{r}
+library(chorddiag)
+chorddiag(Genre.Top2G.Matrix2,groupnameFontsize=8,groupnamePadding = 20,showTicks = FALSE,chordedgeColor =NULL,palette = "Set3",groupColors =Genre.Top2G.Color2)
+```
+
