@@ -71,7 +71,7 @@ function(input, output, session) {
     output$text = renderText({paste(song, collapse = ' => ')})
     
     output$qiu = renderSimpleNetwork({
-       simpleNetwork(netData, fontSize = 20, textColour = 'black', zoom = T, height = 800, width = 800)  
+       simpleNetwork(netData, fontSize = 20, nodeColour  = "#E34A33", textColour = 'black', zoom = T, height = 800, width = 800)  
     })
     
     
