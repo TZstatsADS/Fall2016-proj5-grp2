@@ -11,7 +11,7 @@ logo: www/transparent_logo.jpg
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Inspiration
+## Eureka!
 <img src="www/Screenshot.png" width="800px"/>
   
 ## Example: The Moon Song
