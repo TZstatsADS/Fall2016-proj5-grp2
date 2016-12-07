@@ -16,17 +16,19 @@ Term: Fall 2016
     + EDA
         + Genre popularity over time 
         + Major chords across genres
-    + Naive Bayes: Predict genres using chord frequencies
+    + Naive Bayes: 
+        + Predict genres using chord frequencies
+        + Baseline model: simulation of genres using stratified probability
     + Sequence analysis on chord progression
         + n-gram: bigram, 4-gram
         + tf-idf
-        + Objective: generate sequence with 4-grams
+        + Objective: generate chord sequence with 4-grams
     + Visualizations
         + Use bigrams to make chord diagrams
         + Use 4-grams to make sankey diagrams
     + Shiny app: MelodySoup
         + Generate a sequence of chords given a particular genre (do demo with audio)
-        
+        + https://wanyizhang.shinyapps.io/melodysoup/
         
     
           
