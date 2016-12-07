@@ -106,7 +106,7 @@ p
 - Generate a chord progression given a specific genre
 - Recommend next chord based on (n-1)-gram
 - Rank by tf-idf (term frequency - inverse document frequency)
-- [Click here!](plots/AllChordDiagram.html) 
+- [Click here!](https://wanyizhang.shinyapps.io/melodysoup/) 
 
 <img src="www/transparent_logo.jpg" width="150"/>  
 
