@@ -7,7 +7,7 @@ http://stackoverflow.com/questions/19615181/finding-ngrams-in-r-and-comparing-ng
 http://stackoverflow.com/questions/8161167/what-algorithm-i-need-to-find-n-grams
 
 ```{r}
-load("/Users/mushroomvv/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/Cen-s-billboard-data-processing/cleaned_data.RData")
+load("/Users/mushroomvv/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/output/Cen-s-billboard-data-processing/cleaned_data.RData")
 data = all.chord.original.sd
 head(data)
 
@@ -72,7 +72,7 @@ for (i in 1:5){
   test.data = matrix[test.n, ]
   NB = naiveBayes(genre~., data = train.data)
   pred = predict(NB, test.data[ , -ncol(matrix)])
-  # print(table(pred, test.data[, 4799]))
+  t2 = table(pred, test.data[, ncol(matrix)])
   # print(sum(pred == test.data[ , 4799])/nrow(test.data))
   # print(confusionMatrix(pred, reference = test.data[, ncol(matrix)]))
   temp = sum(pred == genre[test.n])/198
@@ -80,6 +80,8 @@ for (i in 1:5){
   print(i)
 }
 chord.vec; mean(chord.vec)
+t2
+save(t2, file = "~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/output/ioSlides/plots/NB.RData")
 ```
 
 With the same 5-fold cv, naive bayes using chord is better than that using bigrams. Prediction accuracy rate is around 52%.
