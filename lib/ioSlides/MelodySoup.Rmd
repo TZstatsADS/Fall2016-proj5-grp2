@@ -72,6 +72,8 @@ BeatItChord
 
 ## Chord Diagrams of All Genres
 <img src="EDA_plot/All_Genres.png" width="800px"/>
+EDA_plot/AllChordDiagram.html
+![Click here!](EDA_plot/AllChordDiagram.html)
 
 ## Chord Sequence Analysis: 4-Gram
 ```{r}
