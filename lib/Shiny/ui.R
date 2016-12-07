@@ -31,7 +31,9 @@ navbarPage(strong('MelodySoup', style = "font-family: 'times'; font-size:18pt;")
                 
                 selectInput('nextPitch', 'What next?', choices = list('a','b','c','d'), selected = 'a'),
                 
-                actionButton('start', 'click to run')
+                actionButton('start', 'click to run'),
+                
+                uiOutput('sound')
                 
                 ),
                 mainPanel(
