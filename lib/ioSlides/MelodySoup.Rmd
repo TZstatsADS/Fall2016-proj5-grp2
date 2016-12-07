@@ -12,17 +12,18 @@ logo: www/transparent_logo.jpg
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
+##Motivation
+<img src="www/Screenshot.png" width="800px"/>
+  
+## Example: The Moon Song
+<audio controls>
+<source src="www/All_genres.wav" type="audio/mpeg"></source>
+</audio>
+<img src="www/Moon_chords.png" height="170px"/>
+<img src="www/Moon_tabs.png" width="700px"/>
+ 
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
-
-## Slide with Bullets
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
 
 ## Slide with R Output
 
@@ -30,32 +31,37 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-## Slide with Plot
+## Genre popularity from 1958 to 1991
 
 ```{r}
 load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/EDA_plot.RData")
 p1
 ```
   
-## Major chord
+## Major chords across all genres
 ```{r}
 p2
 ```
 
 
-
-
-## Pasta
-![a demo table](Fall2016-proj5-grp2/figs/12keys-with-chords.png)
-
 ----
 
 ![picture of spaghetti](Fall2016-proj5-grp2/figs/12keys-with-chords.png)
 
-## Going to sleep
 
+## Bigram
+
+## Sankey Digram of 4-Grams for All Songs
+
+```{r}
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/Sankey.Rdata")
+Sankey
+```
+
+----
 All genres:
 C:maj => F:maj => C:maj => F:maj => G:maj => Bb:maj => F:maj/3 => Ab:maj => Eb:maj/3
+C:maj, F:maj, G:maj, Bb:maj, Ab:maj, Eb:maj
 
 R&B:
 c:maj => c:sus4(b7 => c:maj => c:sus4(b7 => f:maj => f:sus4(b7 => f:maj => g:maj
