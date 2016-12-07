@@ -13,19 +13,18 @@ Term: Fall 2016
 + Project summary:
     + Dataset: McGill Billboard Project http://ddmal.music.mcgill.ca/billboard  
     + Objective: Generate characteristic chord progressions using sequence analysis
-    + EDA: 
+    + EDA
         + Genre popularity over time 
-        + Major chords by genres
+        + Major chords across genres
     + Naive Bayes: Predict genres using chord frequencies
     + Sequence analysis on chord progression
         + n-gram: bigram, 4-gram
         + tf-idf
         + Objective: generate sequence with 4-grams
-    + Visualization
+    + Visualizations
         + Use bigrams to make chord diagrams
         + Use 4-grams to make sankey diagrams
-    + Results
-        + Shiny app: MelodySoup
+    + Shiny app: MelodySoup
         + Generate a sequence of chords given a particular genre (do demo with audio)
         
         
