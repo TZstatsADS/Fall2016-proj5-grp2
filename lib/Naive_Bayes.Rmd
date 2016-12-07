@@ -54,7 +54,7 @@ for (i in 1:5){
 
 chord naive bayes
 ```{r}
-# load bigram document term matrix
+# load chord document term matrix
 load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/SongTDM.RData")
 library(e1071)
 
