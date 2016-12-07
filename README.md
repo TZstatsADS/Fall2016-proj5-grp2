@@ -12,23 +12,28 @@ Term: Fall 2016
 	+ team member 5 Wanyi Zhang   (wz2323)
 + Project summary:
     + Dataset: McGill Billboard Project http://ddmal.music.mcgill.ca/billboard  
-    + Objective: Generate characteristic chord progressions using sequence analysis
+        + 990 songs of Billboard chart from 1958 to 1991
+        + Containing txt files of chord annotations, and csv file of song information
+        + Genres of songs obtained by API
+        + Transpose chords to the key of C (normalization)
+    + Objective: Generate characteristic chord progressions given a particular genre using sequence analysis
     + EDA
         + Genre popularity over time 
         + Major chords across genres
     + Naive Bayes: 
         + Predict genres using chord frequencies
         + Baseline model: simulation of genres using stratified probability
+        + Prediction accuracy: 52% (enhanced baseline accuracy 25% by 107%)
     + Sequence analysis on chord progression
         + n-gram: bigram, 4-gram
-        + tf-idf
-        + Objective: generate chord sequence with 4-grams
+        + use tf-idf to remove common pattern across all genres
+        + Objective: generate chord progression with 4-grams
     + Visualizations
-        + Use bigrams to make chord diagrams
+        + Use bigrams to make chord diagrams of <Beat It> and for each genre
         + Use 4-grams to make sankey diagrams
-    + Shiny app: MelodySoup
-        + Generate a sequence of chords given a particular genre (do demo with audio)
-        + https://wanyizhang.shinyapps.io/melodysoup/
+    + Shiny app: [MelodySoup](https://wanyizhang.shinyapps.io/melodysoup/)
+        + Recommend next chord given a particular genre based on 4-gram tf-idf
+        + Generate a chord progression and play audio
         
     
           
