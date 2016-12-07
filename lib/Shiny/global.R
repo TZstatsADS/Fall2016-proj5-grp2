@@ -5,7 +5,7 @@ library(networkD3)
 library(visNetwork)
 
 
-load("~/Desktop/Fall2016-proj5-grp2/data/Billboard/cut_GM4.RData")
+load("/Users/jiangrainbow/Documents/Fall2016-proj5-grp2/data/Billboard/cut_GM4.RData")
 
 for(i in 1:length(GM4.prob))
 {
