@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Musical Chords & Keys
 - A chord is 3+ musical notes played at the same time
 - Chord progression 
-- Tranpose chords to the key of C (normalization)
+- Transpose chords to the key of C (normalization)
 - Example: 
 <img src="www/MayDay.png" width="700px"/>
 
