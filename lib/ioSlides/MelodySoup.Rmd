@@ -32,7 +32,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 
-
 ## EDA: Genre Popularity over Time
 ```{r}
 load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/EDA_plot.RData")
