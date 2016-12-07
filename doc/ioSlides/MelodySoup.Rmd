@@ -36,7 +36,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## EDA: Genre Popularity over Time
 ```{r}
-load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/output/ioSlides/plots/EDA_plot.RData")
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/doc/ioSlides/plots/EDA_plot.RData")
 p1
 ```
   
@@ -50,7 +50,7 @@ p2
 - Prediction accuracy: 52%
 - Baseline accuracy: 25% (Enhanced by 107%!)
 ```{r}
-load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/output/ioSlides/plots/NB.RData")
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/doc/ioSlides/plots/NB.RData")
 t2
 ```
 
@@ -75,7 +75,7 @@ Beat It - Michael Jackson
 </div>
 >- C:min => Bb:maj => C:min => Bj:maj => ... ...
 ```{r}
-load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/output/ioSlides/plots/BeatIt.RData")
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/doc/ioSlides/plots/BeatIt.RData")
 BeatItChord
 ```
 
@@ -85,19 +85,19 @@ BeatItChord
 
 ## Sequence Analysis: 4-gram
 ```{r}
-load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/output/ioSlides/plots/Sankey.Rdata")
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/doc/ioSlides/plots/Sankey.Rdata")
 Sankey
 ```
 
 ## 4-Gram using tf-idf: R&B genre
 ```{r}
-load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/output/ioSlides/plots/R&B_Sankey.RData")
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/doc/ioSlides/plots/R&B_Sankey.RData")
 RB_Sankey
 ```
 
 ## 4-Gram using tf-idf: Country genre 
 ```{r}
-load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/output/ioSlides/plots/Country_Sankey.RData")
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/doc/ioSlides/plots/Country_Sankey.RData")
 p
 ```
 
