@@ -34,7 +34,7 @@ Term: Fall 2016
         + Use 4-grams to make sankey diagrams
     + Shiny app: [MelodySoup](https://wanyizhang.shinyapps.io/melodysoup/)
         + Recommend top 6 starting chords and next chord given a particular genre based on 4-gram tf-idf
-        + Generate a chord progression with visuals and audio
+        + Generate a chord progression with visuals and audio  
         
     
      
