@@ -3,6 +3,7 @@ title: "MelodySoup: A Music Writing App Based on Chord Mining"
 author: "Wanyi Zhang"
 date: "12/7/2016"
 output: ioslides_presentation
+incremental: true
 css: styles.css
 logo: www/transparent_logo.jpg
 
@@ -44,15 +45,30 @@ p2
 ```
 
 
-----
-
-![picture of spaghetti](Fall2016-proj5-grp2/figs/12keys-with-chords.png)
-
 
 ## Bigram
+<audio controls>
+<source src="www/Michael Jackson-Beat It.mp3" type="audio/mpeg"></source>
+</audio>
+<audio controls>
+<source src="www/BeatItChord.wav" type="audio/mpeg"></source>
+</audio> 
+>- <div class="red2">
+Beat It - Michael Jackson
+</div>
+>- C:min => Bb:maj => C:min => Bj:maj => ... ...
+```{r}
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/BeatIt.RData")
+BeatItChord
+```
 
-## Sankey Digram of 4-Grams for All Songs
 
+# Circular Diagrams for All Genres
+<img src="www/Screenshot.png" width="800px"/>
+
+
+
+## Sankey Digram for All Songs
 ```{r}
 load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/Sankey.Rdata")
 Sankey
