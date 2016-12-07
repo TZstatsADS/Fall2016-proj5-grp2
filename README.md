@@ -20,7 +20,7 @@ Term: Fall 2016
     + EDA
         + Genre popularity over time 
         + Major chords across genres
-    + Naive Bayes: 
+    + Naive Bayes 
         + Predict genres using chord frequencies
         + Baseline model: simulation of genres using stratified probability
         + Prediction accuracy: 52% (enhanced baseline accuracy 25% by 107%)
@@ -28,7 +28,7 @@ Term: Fall 2016
         + n-gram: bigram, 4-gram
         + use tf-idf to remove common pattern across all genres
         + Objective: generate chord progression with 4-grams
-    + Visualizations
+    + Interactive visualization of n-gram
         + Use bigrams to make chord diagrams of <Beat It> and for each genre
         + Use 4-grams to make sankey diagrams
     + Shiny app: [MelodySoup](https://wanyizhang.shinyapps.io/melodysoup/)
@@ -36,7 +36,9 @@ Term: Fall 2016
         + Generate a chord progression and play audio
         
     
-          
+     
+        
+                 
 **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
