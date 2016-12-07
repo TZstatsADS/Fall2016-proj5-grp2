@@ -32,8 +32,8 @@ Term: Fall 2016
         + Use bigrams to make chord diagrams of <Beat It> and for each genre
         + Use 4-grams to make sankey diagrams
     + Shiny app: [MelodySoup](https://wanyizhang.shinyapps.io/melodysoup/)
-        + Recommend next chord given a particular genre based on 4-gram tf-idf
-        + Generate a chord progression and play audio
+        + Recommend top 6 starting chords and next chord given a particular genre based on 4-gram tf-idf
+        + Generate a chord progression with visuals and audio
         
     
      
