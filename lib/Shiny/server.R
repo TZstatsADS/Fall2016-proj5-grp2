@@ -6,6 +6,7 @@ library(highcharter)
 total_input= character()
 total_output = character()
 song = character()
+last_sound = 'Nothing'
 
 function(input, output, session) {
   
@@ -17,7 +18,7 @@ function(input, output, session) {
   observeEvent(input$Genre,{
     updateActionButton(session, 'start', 'Start!')
     
-    output$html = renderText({'<h1>Music Player</h1><audio controls><source src="/Users/Max/Desktop/record.mp3" type="audio/mpeg"></source></audio>'})
+    output$html = renderText({'<h1>Music Player</h1><audio src="c-maj.mp3" type="audio/mp3" controls></audio>'})
     total_input <<- character()
     total_output <<- character()
     song <<- character()
@@ -49,8 +50,8 @@ function(input, output, session) {
     end = next_chord(input$Genre, three_gram)
     plot_end = next_chord_with_prob(input$Genre, three_gram)
     
-    print(three_gram)
-    print(end)
+    #print(three_gram)
+    print(input$nextPitch)
     
     for (i in seq(length(song) - 1)){
       total_input = c(total_input,song[i])
@@ -70,10 +71,11 @@ function(input, output, session) {
     
     output$text = renderText({paste(song, collapse = ' => ')})
     
+    #------------------replace plotting----------------------
     output$qiu = renderSimpleNetwork({
        simpleNetwork(netData, fontSize = 20, nodeColour  = "#E34A33", textColour = 'black', zoom = T, height = 800, width = 800)  
     })
-    
+    #_______________________________________________________
     
     output$bar = renderHighchart({
       highchart() %>% 
@@ -82,8 +84,17 @@ function(input, output, session) {
         hc_xAxis(categories = plot_end$chord) %>% 
         hc_add_series(data = plot_end$prob, name = 'Next chord')
     })  
-      
-      
+    
+    src = stupid_file_name(input$nextPitch)
+    #force render
+    if (src == last_sound){
+      src = past0(last_sound,' ')
+    } 
+    sound_name <<- src
+    
+    output$sound = renderText({paste0('<audio src= "',src,'" type="audio/mp3" autoplay></audio>')})
+    
+    
   })
     
 
