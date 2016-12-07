@@ -126,10 +126,18 @@ for(i in 1:length(all.chord.original.sd)){
   All_Chords<-paste(All_Chords,"\n")
 }
 
+
+
 all_NG <- ngram(All_Chords,4)
 all_chord_ngram <- get.phrasetable(all_NG)
 
 save(all_chord_ngram,file="All4Grams.Rdata")
+
+###
+df<-all_chord_ngram
+X<-with(df, cbind( colsplit(df$ngrams, pattern = "\\s", names = c('a', 'b','c','d')),freq))
+X$d <- gsub('\\s', '', X$d)
+write.csv(X,"all_chord_ngram.csv")
 
 
 
