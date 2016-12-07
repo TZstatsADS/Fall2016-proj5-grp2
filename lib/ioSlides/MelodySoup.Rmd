@@ -6,8 +6,6 @@ output: ioslides_presentation
 incremental: true
 css: styles.css
 logo: www/transparent_logo.jpg
-
-
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -22,31 +20,41 @@ knitr::opts_chunk$set(echo = FALSE)
 </audio>
 <img src="www/Moon_chords.png" height="170px"/>
 <img src="www/Moon_tabs.png" width="700px"/>
- 
+
+## Chords & Keys
+- A chord is three or more musical notes played at the same time
+- Chord progression 
+- Normalize chords to the key of C
+
+## Dataset: Billboard
 
 
 
-## Slide with R Output
 
-```{r cars, echo = TRUE}
-summary(cars)
-```
 
-## Genre popularity from 1958 to 1991
 
+## EDA: Genre Popularity over Time
 ```{r}
 load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/EDA_plot.RData")
 p1
 ```
   
-## Major chords across all genres
+## EDA: Major Chords of All Genres
 ```{r}
 p2
 ```
 
+## Naive Bayes
+- Classify genres using chords
+- Prediction accuracy: 52%
+- Baseline accuracy: 25% (Enhanced by 107%!)
 
+## Sequence Analysis: N-gram
+- An n-gram is a contiguous sequence of n items from a given sequence of text or speech
+- N = 1 (unigram), 2 (bigram), 3 (trigram), 4 (4-gram), ....
+- Widely used in NLP, DNA sequencing...
 
-## Bigram
+## Chord Sequence Analysis: Bigram
 <audio controls>
 <source src="www/Michael Jackson-Beat It.mp3" type="audio/mpeg"></source>
 </audio>
@@ -62,26 +70,19 @@ load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlid
 BeatItChord
 ```
 
+## Chord Diagrams of All Genres
+<img src="EDA_plot/All_Genres.png" width="800px"/>
 
-# Circular Diagrams for All Genres
-<img src="www/Screenshot.png" width="800px"/>
-
-
-
-## Sankey Digram for All Songs
+## Chord Sequence Analysis: 4-Gram
 ```{r}
 load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/Sankey.Rdata")
 Sankey
 ```
 
-----
-All genres:
-C:maj => F:maj => C:maj => F:maj => G:maj => Bb:maj => F:maj/3 => Ab:maj => Eb:maj/3
-C:maj, F:maj, G:maj, Bb:maj, Ab:maj, Eb:maj
+## Shiny App: MelodySoup
+- Generate a chord sequence given a specific genre
+- Recommend next chord based on previous 3 chords sequence
+- Rank by tf-idf (term frequency???inverse document frequency)
+- &^%#!(*^(@(#&)#&)!@)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-R&B:
-c:maj => c:sus4(b7 => c:maj => c:sus4(b7 => f:maj => f:sus4(b7 => f:maj => g:maj
 
-Jazz:
-c:maj(9) => c:maj/5 => g:maj => c:maj(9) => c:maj/5 => g:maj => c:7 => f:7
-g:7/5 => c:maj => d:7 => g:7 => c:7 => f:maj => c:maj
