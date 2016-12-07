@@ -10,14 +10,14 @@ Term: Fall 2016
 	+ team member 3 Yixin Sun     (ys2879)
 	+ team member 4 Cen Zeng      (cz2379)
 	+ team member 5 Wanyi Zhang   (wz2323)
++ Data source: [McGill Billboard Project](http://ddmal.music.mcgill.ca/billboard) 
+     + 990 songs of Billboard chart from 1958 to 1991
+    + Containing txt files of chord annotations, and csv file of song information
+     + Genres of songs obtained by API
+    + Transpose chords to the key of C (normalization)
 + Project summary:
-    + Dataset: [McGill Billboard Project](http://ddmal.music.mcgill.ca/billboard) 
-        + 990 songs of Billboard chart from 1958 to 1991
-        + Containing txt files of chord annotations, and csv file of song information
-        + Genres of songs obtained by API
-        + Transpose chords to the key of C (normalization)
     + Objective: Generate characteristic chord progressions given a particular genre using sequence analysis
-    + Data overview
+    + EDA plots
         + Time series plot of genre popularity from 1958 to 1991
         + Major chord composition across genres
     + Naive Bayes 
