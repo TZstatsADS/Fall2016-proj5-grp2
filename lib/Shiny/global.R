@@ -36,3 +36,13 @@ next_chord_with_prob = function(genre, previous_chord){
   return(output)
 }
 
+stupid_file_name = function(chord){
+  #remove / sign
+  pos = gregexpr('/', chord)[[1]][1]
+  if (pos > 0){
+    output = substr(chord, 1, pos-1)
+  } else {
+    output = chord
+  }
+  return(paste0(gsub(':','-', output),'.mp3'))
+}
