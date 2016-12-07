@@ -17,10 +17,11 @@ Term: Fall 2016
         + Genres of songs obtained by API
         + Transpose chords to the key of C (normalization)
     + Objective: Generate characteristic chord progressions given a particular genre using sequence analysis
-    + EDA
-        + Genre popularity over time 
-        + Major chords across genres
+    + Data overview
+        + Time series plot of genre popularity from 1958 to 1991
+        + Major chord composition across genres
     + Naive Bayes 
+        + Objective: see if chords captures patterns for different genres 
         + Predict genres using chord frequencies
         + Baseline model: simulation of genres using stratified probability
         + Prediction accuracy: 52% (enhanced baseline accuracy 25% by 107%)
