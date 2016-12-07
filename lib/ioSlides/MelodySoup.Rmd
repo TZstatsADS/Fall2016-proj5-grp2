@@ -83,7 +83,7 @@ Sankey
 ## R&B
 ```{r}
 load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/R&B_Sankey.RData")
-p
+RB_Sankey
 ```
 
 ## Country
