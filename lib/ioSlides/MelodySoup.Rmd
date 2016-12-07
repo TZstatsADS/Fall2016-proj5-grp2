@@ -73,13 +73,26 @@ BeatItChord
 ## Chord Diagrams of All Genres
 <img src="EDA_plot/All_Genres.png" width="800px"/>
 EDA_plot/AllChordDiagram.html
-![Click here!](EDA_plot/AllChordDiagram.html)
+[Click here!](EDA_plot/AllChordDiagram.html)
 
 ## Chord Sequence Analysis: 4-Gram
 ```{r}
 load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/Sankey.Rdata")
 Sankey
 ```
+
+## R&B
+```{r}
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/R&B_Sankey.Rdata")
+p
+```
+
+## Country
+```{r}
+load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/lib/ioSlides/EDA_plot/Country_Sankey.Rdata")
+p
+```
+
 
 ## Shiny App: MelodySoup
 - Generate a chord sequence given a specific genre
