@@ -20,7 +20,7 @@ function(input, output, session) {
   observeEvent(input$Genre,{
     updateActionButton(session, 'start', 'Start!')
     
-    output$html = renderText({'<h1>Music Player</h1><audio src="c-maj.mp3" type="audio/mp3" controls></audio>'})
+    output$html = renderText({'<h1>Music Player</h1><audio src="All_genres.mp3" type="audio/mp3" controls></audio>'})
     total_input <<- character()
     total_output <<- character()
     song <<- character()

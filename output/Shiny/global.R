@@ -5,7 +5,7 @@ library(networkD3)
 library(visNetwork)
 
 
-load("~/Google Drive/Columbia/5243 ADS/ADS Proj 5/Fall2016-proj5-grp2/data/Billboard/cut_GM4.RData")
+load("www/cut_GM4.RData")
 
 for(i in 1:length(GM4.prob))
 {
