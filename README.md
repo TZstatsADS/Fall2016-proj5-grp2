@@ -24,7 +24,7 @@ Term: Fall 2016
         + Objective: see if chords captures patterns for different genres 
         + Predict genres using chord frequencies
         + Baseline model: simulation of genres using stratified probability
-        + Prediction accuracy: 52% (enhanced baseline accuracy 25% by 107%)
+        + 5-fold cross validation prediction accuracy: 52% (enhanced baseline accuracy 25% by 107%)
     + Sequence analysis on chord progression
         + n-gram: bigram, 4-gram
         + use tf-idf to remove common pattern across all genres
