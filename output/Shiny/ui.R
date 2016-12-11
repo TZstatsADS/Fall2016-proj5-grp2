@@ -8,7 +8,8 @@ library(visNetwork)
 
 tagList(
   useShinyjs(),
-navbarPage(strong('MelodySoup', style = "font-family: 'times'; font-size:18pt;"), theme = shinytheme('cosmo'),
+  fluidPage(list(tags$head(HTML('<link rel="icon", href="transparent_logo.jpg", type="image/jpg" />')))),
+navbarPage(strong('MelodySoup', style = "font-family: 'times'; font-size:18pt;"), theme = shinytheme('cosmo'), windowTitle="MelodySoup - the base for writing melodies", 
   # 1. Intro tab
   tabPanel("About Us", 
           h1("MelodySoup - the base for writing melodies"),
