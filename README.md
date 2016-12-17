@@ -3,7 +3,7 @@
 Term: Fall 2016
 
 + Team Name: MelodySoup
-+ Project title: Music Writing App Based on Chord Mining 
++ Project title: [Music Writing App Based on Chord Mining](http://rpubs.com/wvz/melodysoup)  
 + Team members
 	+ team member 1 Kanghui Jiang (kj2381)
 	+ team member 2 Zhehao Liu    (zl2480)
@@ -35,6 +35,7 @@ Term: Fall 2016
     + Shiny app: [MelodySoup](https://wanyizhang.shinyapps.io/melodysoup/)
         + Recommend top 6 starting chords and next chord given a particular genre based on 4-gram tf-idf
         + Generate a chord progression with visuals and audio  
+    + Presentation: using interactive [ioSlides](http://rpubs.com/wvz/melodysoup)  
         
     
      
