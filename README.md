@@ -10,7 +10,7 @@ Term: Fall 2016
 	+ team member 3 Yixin Sun     (ys2879)
 	+ team member 4 Cen Zeng      (cz2379)
 	+ team member 5 Wanyi Zhang   (wz2323)  
-<hr>
+<br>
 + **Data Source**: [McGill Billboard Project](http://ddmal.music.mcgill.ca/billboard)   
     + 990 songs of Billboard chart from 1958 to 1991
     + Containing txt files of chord annotations, and csv file of song information
@@ -30,23 +30,21 @@ Term: Fall 2016
         + n-gram: bigram, 4-gram
         + use tf-idf to remove common pattern across all genres
         + Objective: generate chord progression with 4-grams
-    + Interactive visualization of n-gram
-        + Use bigrams to make chord diagrams of <Beat It> and for each genre
+    + Interactive visualizations of n-grams
+        + Use bigrams to make chord diagrams of "Beat It" for demo and for each genre
         + Use 4-grams to make sankey diagrams
     + Shiny app: [MelodySoup](https://wanyizhang.shinyapps.io/melodysoup/)
         + Recommend top 6 starting chords and next chord given a particular genre based on 4-gram tf-idf
         + Generate a chord progression with visuals and audio  
-    + Presentation: using interactive [ioSlides](http://rpubs.com/wvz/melodysoup)  
-        
+    + [Presentation: using interactive ioSlides](http://rpubs.com/wvz/melodysoup)  
+<br>
+  
+<br>         
 	
 <img src="figs/MelodySoup screenshot 1.png"/> 
 <img src="figs/MelodySoup screenshot 2.png"/> 
 
-<br>
-  
-  
-  
-<br>   
+ 
                  
 **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
