@@ -38,6 +38,10 @@ Term: Fall 2016
         + Generate a chord progression with visuals and audio  
     + Presentation: using interactive [ioSlides](http://rpubs.com/wvz/melodysoup)  
         
+	
+<img src="figs/MelodySoup screenshot 1.png"/> 
+<img src="figs/MelodySoup screenshot 2.png"/> 
+
 <br>
   
   
